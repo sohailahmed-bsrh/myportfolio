@@ -6,9 +6,9 @@
 :root {
   --bg-primary: #07070a;
   --bg-secondary: #0d0d12;
-  --bg-card: rgba(15, 15, 20, 0.5);
+  --bg-card: rgba(15, 15, 20, 0.6);
   --bg-card-hover: rgba(20, 20, 28, 0.8);
-  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass: rgba(15, 15, 20, 0.6);
 
   --text-primary: #F3F4F6;
   --text-secondary: #9CA3AF;
@@ -34,10 +34,10 @@
   --radius: 12px;
   --radius-lg: 20px;
 
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --fast: 0.18s var(--ease);
-  --normal: 0.3s var(--ease);
-  --slow: 0.5s var(--ease);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --fast: 0.3s var(--ease);
+  --normal: 0.6s var(--ease);
+  --slow: 1s var(--ease);
 }
 
 /* ============================================================
@@ -219,8 +219,12 @@ button {
 .nav-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   padding: 0.5rem;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-toggle span {
@@ -664,66 +668,59 @@ button {
   object-fit: cover;
 }
 
-/* Glassmorphic Data Panels */
+/* 3D AI Data Environment (Canvas) */
+.hero-canvas {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  z-index: 1; /* Behind profile-ring which is z-index: 5 */
+  pointer-events: auto; /* Let the canvas capture mouse moves if needed */
+}
+
+/* Decorative Parallax Panels */
 .glass-panel {
   position: absolute;
-  background: rgba(10, 10, 15, 0.7);
+  background: var(--bg-glass);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  z-index: 3;
-  padding: 1rem;
+  z-index: 10;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .panel-label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   text-align: center;
 }
 
-/* Pipeline Panel (Top Right) */
-.panel-pipeline {
-  top: -5%;
-  right: -15%;
-  animation: float 4s ease-in-out infinite;
+.panel-icon {
+  font-size: 1.5rem;
+  color: var(--cyan);
+  margin-bottom: 0.25rem;
 }
 
-.pipeline-flow {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+.panel-top-left {
+  top: 5%;
+  left: -15%;
 }
 
-.pipeline-flow .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.pipeline-flow .dot.active {
-  background: var(--cyan);
-  border-color: var(--cyan);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
-}
-
-.pipeline-flow .line {
-  width: 25px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Chart Panel (Bottom Left) */
-.panel-chart {
-  bottom: 0%;
-  left: -20%;
-  animation: float 5s ease-in-out infinite 1s;
+.panel-bottom-right {
+  bottom: 5%;
+  right: -20%;
 }
 
 .chart-bars {
@@ -731,6 +728,7 @@ button {
   align-items: flex-end;
   gap: 6px;
   height: 40px;
+  margin-bottom: 0.5rem;
 }
 
 .chart-bars .bar {
@@ -740,33 +738,20 @@ button {
   opacity: 0.8;
 }
 
-/* Nodes Panel (Center Right) */
-.panel-nodes {
-  top: 40%;
-  right: -25%;
-  width: 80px;
-  height: 80px;
-  padding: 0.5rem;
-  animation: float 6s ease-in-out infinite 2s;
+/* Fallback for disabled JS / Canvas */
+.hero-canvas-fallback {
+  position: absolute;
+  inset: -50px;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1), transparent 70%);
+  z-index: 1;
 }
 
-.node-net {
-  width: 100%;
-  height: 100%;
-}
-
-.node-net circle {
-  fill: var(--cyan);
-}
-
-.node-net line {
-  stroke: rgba(6, 182, 212, 0.3);
-  stroke-width: 2;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer {
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -798,20 +783,13 @@ button {
     width: 260px;
     height: 260px;
   }
-
-  /* Hide glass panels at tablet — they use absolute position percentages
-     that bleed outside a narrowed hero-visual container */
-  .glass-panel { display: none; }
 }
 
 @media (max-width: 768px) {
   .hero {
     padding-top: calc(var(--nav-h) + 2rem);
   }
-  /* Hide ALL glass panels on mobile — they bleed outside the viewport */
-  .glass-panel {
-    display: none !important;
-  }
+  
   /* Hero visual: constrain to viewport, prevent overflow */
   .hero-visual {
     width: 100% !important;
@@ -1152,7 +1130,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s var(--ease);
+  transition: transform var(--normal);
 }
 
 .cert-card:hover .cert-thumb img {
@@ -1439,7 +1417,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease);
+  transition: transform var(--normal);
 }
 
 .proj-img-placeholder {
@@ -1815,7 +1793,7 @@ footer {
   border: none;
   color: var(--text-muted);
   cursor: pointer;
-  transition: var(--trans);
+  transition: var(--fast);
 }
 
 .demo-close:hover {
@@ -1856,7 +1834,7 @@ footer {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+  transition: transform var(--fast), border-color var(--fast), box-shadow var(--fast) !important;
 }
 
 .glass-card:hover {
@@ -1907,7 +1885,7 @@ footer {
   color: var(--text-muted);
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all var(--fast);
   cursor: default;
 }
 
@@ -2087,6 +2065,62 @@ footer {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
+}
+
+/* ============================================================
+   VOICE TOGGLE (HOME PAGE ONLY)
+   ============================================================ */
+.voice-toggle {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--normal), transform var(--fast), background var(--fast), color var(--fast);
+  z-index: 999;
+}
+
+.voice-toggle.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.voice-toggle:hover {
+  background: var(--bg-glass);
+  color: var(--cyan);
+  border-color: rgba(6, 182, 212, 0.5);
+  transform: translateY(-3px);
+}
+
+.voice-toggle.playing {
+  color: var(--emerald);
+  border-color: rgba(16, 185, 129, 0.5);
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.2); }
+  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@media (max-width: 768px) {
+  .voice-toggle {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* ============================================================
@@ -2325,6 +2359,9 @@ footer {
 
 /* ── 1024px (tablet landscape / small laptop) ──────────────── */
 @media (max-width: 1024px) {
+  /* Hide decorative glass panels on tablet/mobile to prevent overlapping */
+  .glass-panel { display: none !important; }
+  
   /* Hero: go single-column, center everything */
   .hero-grid {
     grid-template-columns: 1fr;

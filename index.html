@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sohail Ahmed | AI Engineer & Data Scientist</title>
   <meta name="description" content="Portfolio of Sohail Ahmed — AI Engineer, Data Scientist & Full Stack AI Developer from Mansehra, Pakistan. Building intelligent systems with ML, LLMs, RAG, and Computer Vision.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'><i data-lucide="bot"></i></text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="fa-solid fa-robot"></i></text></svg>">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -101,51 +101,44 @@
         </div>
 
         <!-- Visual -->
-        <div class="hero-visual">
-          <div class="profile-ring">
+        <div class="hero-visual" id="hero-parallax-container">
+          <!-- Real Photo in Premium Frame -->
+          <div class="profile-ring parallax-layer" data-speed="0.02">
             <div class="profile-inner">
-              <img src="assets/images/sohail1.jpeg" alt="Sohail Ahmed – AI Engineer">
+              <img src="assets/images/sohail1.jpeg" alt="Sohail Ahmed - AI Engineer">
             </div>
           </div>
           
-          <!-- Glassmorphic Data Panels -->
-          <div class="glass-panel panel-pipeline">
-            <div class="pipeline-flow">
-              <span class="dot"></span>
-              <span class="line"></span>
-              <span class="dot active"></span>
-              <span class="line"></span>
-              <span class="dot"></span>
-            </div>
-            <div class="panel-label">Pipeline</div>
+          <!-- Layered Parallax Panels -->
+          <div class="glass-panel panel-top-left parallax-layer" data-speed="0.06">
+            <div class="panel-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="panel-label">Model Pipeline</div>
           </div>
 
-          <div class="glass-panel panel-chart">
+          <div class="glass-panel panel-bottom-right parallax-layer" data-speed="-0.04">
             <div class="chart-bars">
               <div class="bar" style="height: 40%"></div>
               <div class="bar" style="height: 70%"></div>
               <div class="bar" style="height: 100%"></div>
               <div class="bar" style="height: 60%"></div>
             </div>
+            <div class="panel-label">Data Flow</div>
           </div>
 
-          <div class="glass-panel panel-nodes">
-            <svg viewBox="0 0 100 100" class="node-net">
-              <circle cx="20" cy="50" r="4" />
-              <circle cx="80" cy="20" r="4" />
-              <circle cx="80" cy="80" r="4" />
-              <line x1="20" y1="50" x2="80" y2="20" />
-              <line x1="20" y1="50" x2="80" y2="80" />
-              <line x1="80" y1="20" x2="80" y2="80" />
-            </svg>
-          </div>
+          <!-- Genuine 3D-feeling AI Environment -->
+          <canvas id="hero-canvas" class="hero-canvas parallax-layer" data-speed="-0.02"></canvas>
+          
+          <!-- Clean static fallback -->
+          <noscript>
+            <div class="hero-canvas-fallback"></div>
+          </noscript>
         </div>
 
 
       </div>
       <div class="scroll-cue">
         <span>Scroll</span>
-        <i data-lucide="chevron-down"></i>
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
 
@@ -161,105 +154,105 @@
         <div class="services-grid">
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="cpu" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-microchip"></i>
             </div>
             <h3>AI Engineering</h3>
             <p>Designing and architecting scalable, end-to-end artificial intelligence systems for real-world production.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="network" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-network-wired"></i>
             </div>
             <h3>Machine Learning</h3>
             <p>Training robust predictive models and classification systems tailored to specific business needs.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="layers" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-layer-group"></i>
             </div>
             <h3>Deep Learning</h3>
             <p>Developing complex neural networks for advanced pattern recognition and unstructured data processing.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="eye" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-eye"></i>
             </div>
             <h3>Computer Vision</h3>
             <p>Creating image classification, object detection, and facial recognition models for automated visual inspection.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="sparkles" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
             <h3>Generative AI</h3>
             <p>Building creative AI applications capable of generating text, code, images, and synthetic data.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="message-square" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-comments"></i>
             </div>
             <h3>LLMs</h3>
             <p>Fine-tuning and deploying Large Language Models for enterprise-grade conversational AI and text analysis.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="database" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-database"></i>
             </div>
             <h3>RAG</h3>
             <p>Implementing Retrieval-Augmented Generation to give LLMs context-aware access to your proprietary databases.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="bot" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-robot"></i>
             </div>
             <h3>AI Agents</h3>
             <p>Developing autonomous AI agents capable of planning and executing multi-step business workflows.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="share-2" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-share-nodes"></i>
             </div>
             <h3>Agentic AI</h3>
             <p>Architecting swarms of multi-agent systems that collaborate to solve highly complex tasks without human intervention.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="zap" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-bolt"></i>
             </div>
             <h3>Automation</h3>
             <p>Streamlining repetitive manual tasks using intelligent scripting, OCR, and AI-driven decision engines.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="server-cog" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-server"></i>
             </div>
             <h3>FastAPI</h3>
             <p>Building high-performance, asynchronous REST APIs in Python to serve machine learning models efficiently.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="cloud-upload" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-cloud-arrow-up"></i>
             </div>
             <h3>Deployment & MLOps</h3>
             <p>Containerizing AI models with Docker and deploying them seamlessly on cloud platforms like AWS and Render.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="bar-chart-3" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-chart-column"></i>
             </div>
             <h3>Data Analytics</h3>
             <p>Performing Exploratory Data Analysis (EDA) and visualization to extract actionable business insights from raw data.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="terminal-square" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-terminal"></i>
             </div>
             <h3>Prompt Engineering</h3>
             <p>Crafting advanced, optimized prompts to maximize the accuracy, consistency, and safety of LLM outputs.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i data-lucide="cable" stroke-width="1.5" width="28" height="28"></i>
+              <i class="fa-solid fa-plug"></i>
             </div>
             <h3>API Development</h3>
             <p>Designing secure and scalable backend APIs to integrate AI capabilities into existing enterprise software.</p>
@@ -269,7 +262,7 @@
       </div>
       <div class="scroll-cue">
         <span>Scroll</span>
-        <i data-lucide="chevron-down"></i>
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
   </main>
@@ -302,10 +295,15 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Floating Audio Control -->
+  <button id="voice-toggle" class="voice-toggle" aria-label="Toggle voice greeting">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+
+  
 </body>
 </html>

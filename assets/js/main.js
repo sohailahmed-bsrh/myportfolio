@@ -80,30 +80,156 @@ document.addEventListener('DOMContentLoaded', () => {
       stagger: 0.08
     })
     .from('.profile-ring', { scale: 0.9, opacity: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
-    .from('.glass-panel', { opacity: 0, y: 15, stagger: 0.1, duration: 0.6, ease: 'power2.out' }, '-=0.5');
+    .from('.glass-panel', { opacity: 0, y: 15, stagger: 0.1, duration: 0.6, ease: 'power2.out' }, '-=0.5')
+    .from('#hero-canvas', { opacity: 0, duration: 1, ease: 'power2.out' }, '-=0.5');
+    
+    initCanvasNetwork();
+
+    // Mouse Parallax Effect (only runs if reduced motion is false)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+      const heroVisual = document.getElementById('hero-parallax-container');
+      const layers = document.querySelectorAll('.parallax-layer');
+      
+      if (heroVisual) {
+        heroVisual.addEventListener('mousemove', (e) => {
+          const rect = heroVisual.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          layers.forEach(layer => {
+            const speed = parseFloat(layer.getAttribute('data-speed')) || 0;
+            const xOffset = x * speed;
+            const yOffset = y * speed;
+            gsap.to(layer, {
+              x: xOffset,
+              y: yOffset,
+              duration: 0.5,
+              ease: 'power2.out'
+            });
+          });
+        });
+        
+        heroVisual.addEventListener('mouseleave', () => {
+          gsap.to(layers, { x: 0, y: 0, duration: 0.8, ease: 'power2.out' });
+        });
+      }
+    }
   }
 
-  // ── Scroll reveal for .gsap-reveal elements ──────────────
-  document.querySelectorAll('.gsap-reveal').forEach(el => {
-    gsap.fromTo(el,
-      { y: 40, opacity: 0 },
-      {
-        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-        y: 0, opacity: 1, duration: 0.75, ease: 'power2.out'
+  // ── Canvas Particle Network ─────────────────────────────────
+  function initCanvasNetwork() {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    let isPaused = false;
+    
+    function resize() {
+      const dpr = window.devicePixelRatio || 1;
+      width = canvas.parentElement.offsetWidth;
+      height = canvas.parentElement.offsetHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+    }
+    
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.radius = Math.random() * 1.5 + 0.5;
       }
-    );
-  });
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(6, 182, 212, 0.7)'; // Cyan
+        ctx.fill();
+      }
+    }
 
-  // ── Stagger for .gsap-stagger children ───────────────────
-  document.querySelectorAll('.gsap-stagger').forEach(container => {
-    const children = container.children;
-    gsap.fromTo(children,
-      { y: 35, opacity: 0 },
-      {
-        scrollTrigger: { trigger: container, start: 'top 85%', toggleActions: 'play none none none' },
-        y: 0, opacity: 1, duration: 0.7, ease: 'power2.out', stagger: 0.1
+    function init() {
+      resize();
+      window.addEventListener('resize', resize);
+      
+      const numParticles = window.innerWidth < 768 ? 30 : 60; 
+      for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
       }
-    );
+      
+      const observer = new IntersectionObserver((entries) => {
+        isPaused = !entries[0].isIntersecting;
+        if (!isPaused) requestAnimationFrame(animate);
+      });
+      observer.observe(document.querySelector('.hero'));
+    }
+    
+    function animate() {
+      if (isPaused) return;
+      ctx.clearRect(0, 0, width, height);
+      
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            const opacity = 1 - (dist / 100);
+            ctx.strokeStyle = `rgba(16, 185, 129, ${opacity * 0.35})`; // Emerald
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    init();
+  }
+
+  // ── Scroll reveal for .gsap-reveal and .gsap-stagger ────────
+  let mm = gsap.matchMedia();
+  
+  mm.add("(prefers-reduced-motion: no-preference)", () => {
+    // Fade and slide in once when scrolled into view
+    document.querySelectorAll('.gsap-reveal').forEach(el => {
+      gsap.fromTo(el,
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
+        }
+      );
+    });
+
+    // Stagger for .gsap-stagger children
+    document.querySelectorAll('.gsap-stagger').forEach(container => {
+      const children = container.children;
+      gsap.fromTo(children,
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: { trigger: container, start: 'top 85%', toggleActions: 'play none none none' },
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.1
+        }
+      );
+    });
   });
 
   // ── Back to Top Button ────────────────────────────────────
@@ -240,4 +366,92 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prefersReducedMotion && typeof gsap !== 'undefined') {
     gsap.globalTimeline.timeScale(1000);
   }
+});
+
+// ── Voice Greeting (Home Page Only) ───────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const voiceToggleBtn = document.getElementById('voice-toggle');
+  
+  if (!voiceToggleBtn) return;
+
+  const GREETING_TEXT = "Hello, and welcome to my portfolio. I'm Sohail Ahmed, an AI Engineer specializing in data science and machine learning. Feel free to explore my work.";
+  let utterance = null;
+  let isPlaying = false;
+  let greetingTriggered = false;
+
+  if ('speechSynthesis' in window) {
+    utterance = new SpeechSynthesisUtterance(GREETING_TEXT);
+    utterance.volume = 0.8;
+    utterance.rate = 1.0;
+    
+    voiceToggleBtn.classList.add('visible');
+
+    utterance.onend = () => {
+      isPlaying = false;
+      voiceToggleBtn.classList.remove('playing');
+      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+    };
+
+    utterance.onerror = (e) => {
+      isPlaying = false;
+      voiceToggleBtn.classList.remove('playing');
+      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+    };
+  } else {
+    return;
+  }
+
+  const hasPlayed = sessionStorage.getItem('greetingPlayed');
+
+  const playGreeting = () => {
+    if (greetingTriggered || hasPlayed || !utterance) return;
+    greetingTriggered = true;
+    sessionStorage.setItem('greetingPlayed', 'true');
+    
+    // Ensure any previously stuck utterances are cleared before speaking
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+    
+    isPlaying = true;
+    voiceToggleBtn.classList.add('playing');
+    voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  };
+
+  const stopGreeting = () => {
+    window.speechSynthesis.cancel();
+    isPlaying = false;
+    voiceToggleBtn.classList.remove('playing');
+    voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+    greetingTriggered = true; 
+    sessionStorage.setItem('greetingPlayed', 'true');
+  };
+
+  // Wait for FIRST interaction (click/touch) to unlock audio
+  if (!hasPlayed) {
+    const triggerInteraction = (e) => {
+      // Don't trigger if they clicked the toggle button (it handles itself)
+      if (e.target.closest('#voice-toggle')) return;
+      playGreeting();
+      ['click', 'touchstart'].forEach(evt => {
+        document.removeEventListener(evt, triggerInteraction);
+      });
+    };
+    
+    ['click', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, triggerInteraction, { passive: true });
+    });
+  }
+
+  // Toggle button manual control
+  voiceToggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      stopGreeting();
+    } else {
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+      isPlaying = true;
+      voiceToggleBtn.classList.add('playing');
+      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+    }
+  });
 });

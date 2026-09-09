@@ -60,15 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Hero animations (only on home) ───────────────────────
   if (document.querySelector('.hero')) {
-    const tl = gsap.timeline({ delay: 0.2 });
-    tl.from('.hero-label', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' })
-      .from('.hero h1', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
-      .from('.hero-role', { y: 25, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-      .from('.animated-skills-wrapper', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .from('.hero-desc', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .from('.hero-actions', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .from('.profile-ring', { scale: 0.85, opacity: 0, duration: 1, ease: 'back.out(1.4)' }, '-=0.6')
-      .from('.float-badge', { opacity: 0, y: 20, stagger: 0.15, duration: 0.6, ease: 'power2.out' }, '-=0.5');
+    const tl = gsap.timeline({ delay: 0.1 });
+    
+    // Grouping elements so the entire sequence finishes within ~1 second
+    const heroElements = [
+      '.hero-eyebrow, .hero h1',
+      '.hero-role',
+      '.animated-skills-wrapper',
+      '.hero-desc',
+      '.hero-actions, .hero-stats',
+      '.hero-social-row, .hero-tech-stack'
+    ];
+    
+    tl.from(heroElements, {
+      y: 20, 
+      opacity: 0, 
+      duration: 0.5, 
+      ease: 'power2.out',
+      stagger: 0.08
+    })
+    .from('.profile-ring', { scale: 0.9, opacity: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
+    .from('.glass-panel', { opacity: 0, y: 15, stagger: 0.1, duration: 0.6, ease: 'power2.out' }, '-=0.5');
   }
 
   // ── Scroll reveal for .gsap-reveal elements ──────────────
@@ -209,5 +221,23 @@ document.addEventListener('DOMContentLoaded', () => {
       loopDeleting();
     }
     typingEffect();
+  }
+});
+
+// ── Contact Form Intercept ──────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! (Note: This is a static demo. A backend like Formspree or FastAPI is required to actually send emails.)');
+      contactForm.reset();
+    });
+  }
+
+  // ── Accessibility: Reduced Motion for GSAP ───────────────────
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion && typeof gsap !== 'undefined') {
+    gsap.globalTimeline.timeScale(1000);
   }
 });

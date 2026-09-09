@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── GSAP setup ───────────────────────────────────────────
   gsap.registerPlugin(ScrollTrigger);
 
-  // ── Page fade-in ─────────────────────────────────────────
-  gsap.fromTo('body', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out' });
+  // ── Page fade-in (removed body fade to let hero stagger be visible) ──
 
   // ── Navbar scroll class ───────────────────────────────────
   const navbar = document.getElementById('navbar');
@@ -77,10 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 0, 
       duration: 0.5, 
       ease: 'power2.out',
-      stagger: 0.08
+      stagger: 0.08,
+      clearProps: 'transform'
     })
-    .from('.profile-ring', { scale: 0.9, opacity: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
-    .from('.glass-panel', { opacity: 0, y: 15, stagger: 0.1, duration: 0.6, ease: 'power2.out' }, '-=0.5')
+    .from('.profile-ring', { scale: 0.9, opacity: 0, duration: 0.7, ease: 'power2.out', clearProps: 'transform' }, '-=0.4')
+    .from('.glass-panel', { opacity: 0, y: 15, stagger: 0.1, duration: 0.6, ease: 'power2.out', clearProps: 'transform' }, '-=0.5')
     .from('#hero-canvas', { opacity: 0, duration: 1, ease: 'power2.out' }, '-=0.5');
     
     initCanvasNetwork();
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { y: 30, opacity: 0 },
         {
           scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', clearProps: 'transform'
         }
       );
     });
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { y: 30, opacity: 0 },
         {
           scrollTrigger: { trigger: container, start: 'top 85%', toggleActions: 'play none none none' },
-          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.1
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.1, clearProps: 'transform'
         }
       );
     });

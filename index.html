@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sohail Ahmed | AI Engineer & Data Scientist</title>
   <meta name="description" content="Portfolio of Sohail Ahmed — AI Engineer, Data Scientist & Full Stack AI Developer from Mansehra, Pakistan. Building intelligent systems with ML, LLMs, RAG, and Computer Vision.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="fa-solid fa-robot"></i></text></svg>">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="ph-bold ph-robot"></i></text></svg>">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2024.1">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -68,11 +69,11 @@
           
           <div class="hero-actions">
             <a href="./assets/js/Sohail_Ahmed_CV.pdf" download="Sohail_Ahmed_CV.pdf" class="btn btn-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <i class="ph-bold ph-download-simple"></i>
               Download CV
             </a>
             <a href="contact.html" class="btn btn-outline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <i class="ph-bold ph-paper-plane-right"></i>
               Contact
             </a>
           </div>
@@ -87,13 +88,15 @@
           </div>
           
           <div class="hero-social-row">
-            <a href="https://github.com/sohail-ahmed-26" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.kaggle.com/sohail2411126" target="_blank" aria-label="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+            <a href="https://github.com/sohail-ahmed-26" target="_blank" aria-label="GitHub"><img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20"></a>
+            <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" aria-label="LinkedIn"><img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20"></a>
+            <a href="https://www.kaggle.com/sohail2411126" target="_blank" aria-label="Kaggle"><img src="https://cdn.simpleicons.org/kaggle/a1a1aa" alt="Kaggle" width="20" height="20"></a>
+            <a href="https://instagram.com/sohail.ahmed_11" target="_blank" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20"></a>
+            <a href="https://x.com/SohailAhmed26" target="_blank" aria-label="X (Twitter)"><img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X" width="20" height="20"></a>
           </div>
 
           <div class="hero-tech-stack">
-            <span class="tech-icon" title="Python"><i class="fa-brands fa-python"></i></span>
+            <span class="tech-icon" title="Python"><img src="https://cdn.simpleicons.org/python/a1a1aa" alt="Python" width="20" height="20" style="vertical-align: middle;"></span>
             <span class="tech-tag">Pandas</span>
             <span class="tech-tag">TensorFlow</span>
             <span class="tech-tag">PyTorch</span>
@@ -102,45 +105,21 @@
 
         <!-- Visual -->
         <div class="hero-visual" id="hero-parallax-container">
+          <!-- Genuine 3D-feeling AI Environment -->
+          <canvas id="hero-canvas" class="hero-canvas parallax-layer" data-speed="-0.02"></canvas>
+          <div id="js-canvas-fallback" class="hero-canvas-fallback" style="display: none;"></div>
+          
           <!-- Real Photo in Premium Frame -->
           <div class="profile-ring parallax-layer" data-speed="0.02">
             <div class="profile-inner">
               <img src="assets/images/sohail1.jpeg" alt="Sohail Ahmed - AI Engineer">
             </div>
           </div>
-          
-          <!-- Layered Parallax Panels -->
-          <div class="glass-panel panel-top-left parallax-layer" data-speed="0.06">
-            <div class="panel-icon"><i class="fa-solid fa-network-wired"></i></div>
-            <div class="panel-label">Model Pipeline</div>
-          </div>
-
-          <div class="glass-panel panel-bottom-right parallax-layer" data-speed="-0.04">
-            <div class="chart-bars">
-              <div class="bar" style="height: 40%"></div>
-              <div class="bar" style="height: 70%"></div>
-              <div class="bar" style="height: 100%"></div>
-              <div class="bar" style="height: 60%"></div>
-            </div>
-            <div class="panel-label">Data Flow</div>
-          </div>
-
-          <!-- Genuine 3D-feeling AI Environment -->
-          <canvas id="hero-canvas" class="hero-canvas parallax-layer" data-speed="-0.02"></canvas>
-          
-          <!-- Clean static fallback -->
-          <noscript>
-            <div class="hero-canvas-fallback"></div>
-          </noscript>
         </div>
 
 
       </div>
-      <div class="scroll-cue">
-        <span>Scroll</span>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
+      </section>
 
     <!-- SERVICES -->
     <section class="section" id="services" style="padding-top: 4rem;">
@@ -154,105 +133,105 @@
         <div class="services-grid">
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-microchip"></i>
+              <i class="ph-bold ph-cpu"></i>
             </div>
             <h3>AI Engineering</h3>
             <p>Designing and architecting scalable, end-to-end artificial intelligence systems for real-world production.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-network-wired"></i>
+              <i class="ph-bold ph-network"></i>
             </div>
             <h3>Machine Learning</h3>
             <p>Training robust predictive models and classification systems tailored to specific business needs.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-layer-group"></i>
+              <i class="ph-bold ph-stack"></i>
             </div>
             <h3>Deep Learning</h3>
             <p>Developing complex neural networks for advanced pattern recognition and unstructured data processing.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-eye"></i>
+              <i class="ph-bold ph-eye"></i>
             </div>
             <h3>Computer Vision</h3>
             <p>Creating image classification, object detection, and facial recognition models for automated visual inspection.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="ph-bold ph-magic-wand"></i>
             </div>
             <h3>Generative AI</h3>
             <p>Building creative AI applications capable of generating text, code, images, and synthetic data.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-comments"></i>
+              <i class="ph-bold ph-chats"></i>
             </div>
             <h3>LLMs</h3>
             <p>Fine-tuning and deploying Large Language Models for enterprise-grade conversational AI and text analysis.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-database"></i>
+              <i class="ph-bold ph-database"></i>
             </div>
             <h3>RAG</h3>
             <p>Implementing Retrieval-Augmented Generation to give LLMs context-aware access to your proprietary databases.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-robot"></i>
+              <i class="ph-bold ph-robot"></i>
             </div>
             <h3>AI Agents</h3>
             <p>Developing autonomous AI agents capable of planning and executing multi-step business workflows.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-share-nodes"></i>
+              <i class="ph-bold ph-share-network"></i>
             </div>
             <h3>Agentic AI</h3>
             <p>Architecting swarms of multi-agent systems that collaborate to solve highly complex tasks without human intervention.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-bolt"></i>
+              <i class="ph-bold ph-lightning"></i>
             </div>
             <h3>Automation</h3>
             <p>Streamlining repetitive manual tasks using intelligent scripting, OCR, and AI-driven decision engines.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-server"></i>
+              <i class="ph-bold ph-hard-drives"></i>
             </div>
             <h3>FastAPI</h3>
             <p>Building high-performance, asynchronous REST APIs in Python to serve machine learning models efficiently.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <i class="ph-bold ph-cloud-arrow-up"></i>
             </div>
             <h3>Deployment & MLOps</h3>
             <p>Containerizing AI models with Docker and deploying them seamlessly on cloud platforms like AWS and Render.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-chart-column"></i>
+              <i class="ph-bold ph-chart-bar"></i>
             </div>
             <h3>Data Analytics</h3>
             <p>Performing Exploratory Data Analysis (EDA) and visualization to extract actionable business insights from raw data.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-terminal"></i>
+              <i class="ph-bold ph-terminal"></i>
             </div>
             <h3>Prompt Engineering</h3>
             <p>Crafting advanced, optimized prompts to maximize the accuracy, consistency, and safety of LLM outputs.</p>
           </div>
           <div class="service-card glass-card gsap-reveal">
             <div class="service-icon">
-              <i class="fa-solid fa-plug"></i>
+              <i class="ph-bold ph-plug"></i>
             </div>
             <h3>API Development</h3>
             <p>Designing secure and scalable backend APIs to integrate AI capabilities into existing enterprise software.</p>
@@ -260,11 +239,7 @@
         </div>
 
       </div>
-      <div class="scroll-cue">
-        <span>Scroll</span>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
+      </section>
   </main>
 
   <!-- FOOTER -->
@@ -273,16 +248,16 @@
       <div class="footer-inner" style="justify-content: center;">
         <div class="footer-socials">
           <a href="https://github.com/sohail-ahmed-26" target="_blank" class="soc-btn" aria-label="GitHub" title="GitHub">
-            <i class="fa-brands fa-github"></i>
+            <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20">
           </a>
           <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" class="soc-btn" aria-label="LinkedIn" title="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
+            <img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20">
           </a>
           <a href="https://www.instagram.com/sohailahmed5990" target="_blank" class="soc-btn" aria-label="Instagram" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+            <img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20">
           </a>
           <a href="https://x.com/ahmed241126" target="_blank" class="soc-btn" aria-label="Twitter / X" title="Twitter / X">
-            <i class="fa-brands fa-x-twitter"></i>
+            <img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20">
           </a>
         </div>
       </div>
@@ -295,14 +270,14 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-    <!-- Floating Audio Control -->
+    <!-- Floating Voice Greeting Control -->
   <button id="voice-toggle" class="voice-toggle" aria-label="Toggle voice greeting">
-    <i class="fa-solid fa-volume-xmark"></i>
+    <i class="ph-bold ph-speaker-slash"></i>
   </button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js?v=2024.1"></script>
 
   
 </body>

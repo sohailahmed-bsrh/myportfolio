@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Sohail Ahmed – AI Engineer</title>
   <meta name="description" content="Machine Learning, AI, Computer Vision, and Data Science projects by Sohail Ahmed — real production projects with live demos and source code.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="fa-solid fa-robot"></i></text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="ph-bold ph-robot"></i></text></svg>">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -36,11 +37,11 @@
   </div>
 
   <!-- PAGE HEADER -->
-  <header class="page-header">
-    <div class="container">
-      <p class="page-label gsap-reveal">GitHub Portfolio</p>
-      <h1 class="gsap-reveal">Projects</h1>
-      <p class="gsap-reveal">A curated collection of my work across Machine Learning, Deep Learning, Computer Vision, and Full Stack AI development.</p>
+  <header class="page-header" style="padding-bottom: 2rem;">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <p class="page-label gsap-reveal">Applied Intelligence</p>
+      <h1 class="gsap-reveal text-gradient" style="font-size: 3.5rem; margin-bottom: 1rem;">Project Architecture</h1>
+      <p class="gsap-reveal text-secondary" style="font-size: 1.15rem; line-height: 1.6;">A curated collection of my technical work spanning Machine Learning, Deep Learning, Computer Vision, and Autonomous Agent Systems.</p>
     </div>
   </header>
 
@@ -48,15 +49,33 @@
   <main>
     <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="projects-grid gsap-stagger">
+        <!-- Project Filter Bar -->
+        <div class="project-filter-bar" id="project-filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+          <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+          <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+          <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+          <button class="filter-btn" data-filter="generative-ai">Generative AI</button>
+          <button class="filter-btn" data-filter="ai-automation">AI Automation</button>
+          <button class="filter-btn" data-filter="ai-agents">Agentic AI <span class="coming-soon">Soon</span></button>
+        </div>
+
+        <div id="projects-empty-state" class="empty-state" style="display: none; text-align: center; padding: 4rem 1rem;">
+          <i class="ph-bold ph-flask text-cyan" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+          <h3 class="text-gradient" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Research & Development</h3>
+          <p class="text-secondary">Projects in this category are currently in development. Check back later.</p>
+        </div>
+
+        <div class="projects-grid gsap-stagger" id="projects-grid">
 
           <!-- 1. Smart Attendance System -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="computer-vision">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/smar_attendence_system.jpeg" alt="Smart Attendance System" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/smart_attendence_system" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -70,22 +89,22 @@
               <p class="proj-desc">Automated attendance tracking system using face recognition and computer vision — eliminating manual attendance processes in educational or corporate settings.</p>
               <div class="proj-footer">
                 <button class="btn-demo" onclick="openDemo('app', '', 'Smart Attendance System', 'https://github.com/sohail-ahmed-26/smart_attendence_system')">
-                  <i class="fa-solid fa-play"></i> Run Locally
+                  <i class="ph-bold ph-play"></i> Run Locally
                 </button>
                 <a href="https://github.com/sohail-ahmed-26/smart_attendence_system" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 2. Pothole Detection App -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="computer-vision">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/road_pothole.jpeg" alt="Pothole Detection App" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Pothole_Detection_App" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -99,22 +118,22 @@
               <p class="proj-desc">Real-time pothole detection system using YOLOv8 deep learning and computer vision to identify road hazards — supporting infrastructure maintenance through automated visual inspection.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/Pothole_Detection_App/blob/main/Yolo_v8_custom_training.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/Pothole_Detection_App" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 3. ASL Recognition Project -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="computer-vision">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/asl_recognition.jpeg" alt="ASL Recognition Project" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/ASL_Recognition_Project" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -128,22 +147,22 @@
               <p class="proj-desc">American Sign Language (ASL) hand gesture recognition system using Convolutional Neural Networks — enabling accessibility for the hearing-impaired through AI-powered sign detection.</p>
               <div class="proj-footer">
                 <button class="btn-demo" onclick="openDemo('app', '', 'ASL Recognition Project', 'https://github.com/sohail-ahmed-26/ASL_Recognition_Project')">
-                  <i class="fa-solid fa-play"></i> Run Locally
+                  <i class="ph-bold ph-play"></i> Run Locally
                 </button>
                 <a href="https://github.com/sohail-ahmed-26/ASL_Recognition_Project" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 4. Documents Scanner -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="computer-vision">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/documen_scanner.jpeg" alt="Documents Scanner" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Documents_Scanner_Projects" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -157,22 +176,22 @@
               <p class="proj-desc">Intelligent document scanning application using OpenCV for edge detection, perspective transformation, and image enhancement — producing clean, digitized document outputs.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/Documents_Scanner_Projects/blob/main/document%20scanner.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/Documents_Scanner_Projects" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 5. Sales Data Analysis -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="data-analysis">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/WhatsApp Image 2026-02-26 at 12.26.29 PM.jpeg" alt="Sales Data Analysis" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/Projects/Project%201/sales_dataset.ipynb" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -186,22 +205,22 @@
               <p class="proj-desc">In-depth exploratory data analysis and insight generation for retail sales datasets — uncovering trends, seasonality, and revenue drivers to support business decision-making.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/Projects/Project%201/sales_dataset.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/Mentorship-Program-Devsil" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 6. Customer Churn Analysis -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="machine-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/costumer_churn.png.jpeg" alt="Customer Churn Analysis" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/costumer_chorn_analysis%20(1).ipynb" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -215,22 +234,22 @@
               <p class="proj-desc">Predicting customer retention and identifying key churn risk factors using robust machine learning classification models — helping businesses proactively retain at-risk customers.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/costumer_chorn_analysis%20(1).ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/Mentorship-Program-Devsil" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 7. Employee Attrition Analysis -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="data-analysis">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/employee-attrition.png.jpeg" alt="Employee Attrition Analysis" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Employee-Attrition-Analysis" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -244,22 +263,22 @@
               <p class="proj-desc">Analyzing workforce data to understand and predict employee turnover rates — identifying key drivers of attrition to inform HR strategy and retention programs.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/Employee-Attrition-Analysis/blob/main/Employee%20Attrition%20Analysis.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/Employee-Attrition-Analysis" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 8. Emergency Room Analysis -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="data-analysis">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/emergency.png.jpeg" alt="Emergency Room Analysis" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/emergency-_room_analysis" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -273,22 +292,22 @@
               <p class="proj-desc">Analyzing hospital emergency room traffic patterns to optimize staffing schedules and reduce patient wait times — delivering actionable insights for healthcare administration.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/emergency-_room_analysis/blob/main/ER.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/emergency-_room_analysis" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 9. Heart Disease Prediction -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="machine-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/heart_disease.png.jpeg" alt="Heart Disease Prediction" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/00_Project" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -302,22 +321,22 @@
               <p class="proj-desc">Diagnostic classification model predicting the likelihood of heart disease based on clinical parameters — supporting early detection and preventative healthcare decisions.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/00_Project/blob/main/01_Heart_disease_prediction/heart_disease_prediction.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/00_Project" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 10. Social Media Engagement Prediction -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="machine-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/social.png.jpeg" alt="Social Media Engagement Prediction" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/project_6" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -331,22 +350,22 @@
               <p class="proj-desc">Predictive modeling of social media engagement metrics — forecasting likes, shares, and reach to optimize content strategy for creators and brands.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/project_6/blob/main/dataset/social_media_engagement_prediction.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/project_6" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 11. Healthcare Cost Prediction -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="machine-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/healthcare.png.png" alt="Healthcare Cost Prediction" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/project_08" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -360,22 +379,22 @@
               <p class="proj-desc">Patient segmentation and healthcare cost forecasting models — helping insurance companies optimize resource allocation and pricing strategies through data-driven insights.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/project_08/blob/main/dataset/insurance.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/project_08" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 12. Unsupervised & Deep Learning -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="machine-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/unsupervised.png.jpeg" alt="Unsupervised & Deep Learning" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/project-9-ML-DL" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -389,22 +408,22 @@
               <p class="proj-desc">Exploration of clustering algorithms combined with deep neural networks for complex, unlabeled pattern discovery — applied to real-world datasets for unsupervised learning insights.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/project-9-ML-DL/blob/main/Unsupervised_ML_%26_Deep_Learning.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/project-9-ML-DL" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 13. CNN & LSTM -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="deep-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/cnn pic.png.jpeg" alt="CNN & LSTM Deep Learning" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/CNN-project-_10" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -418,22 +437,22 @@
               <p class="proj-desc">Advanced deep learning project implementing CNNs for image classification and LSTMs for natural language processing — demonstrating expertise in both Computer Vision and NLP architectures.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/CNN-project-_10/blob/main/Deep_Learning_Project_using_CNN_(Computer_Vision)_and_LSTM_(NLP).ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/CNN-project-_10" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 14. Time Series Forecasting -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="deep-learning">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/time_series.jpeg" alt="Time Series Forecasting" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/project_11" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -447,22 +466,22 @@
               <p class="proj-desc">Applying transfer learning techniques to sequential time-series data — achieving accurate future predictions for temporal patterns in financial and operational datasets.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/project_11/blob/main/time_series_forcasting.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/project_11" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 15. Full Stack AI Application -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="generative-ai ai-automation">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/streamlit.jpeg" alt="Full Stack AI Application" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/project_12" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -476,22 +495,22 @@
               <p class="proj-desc">End-to-end AI application development demonstrating full-stack integration: ML models served through FastAPI and Flask backends, with an interactive Streamlit frontend — a complete production-ready AI system.</p>
               <div class="proj-footer">
                 <a href="https://nbviewer.org/github/sohail-ahmed-26/project_12/blob/main/FULL_STACK_AI_APPLICATION_DEVELOPMENT_USING_STREAMLIT%2C_FLASK_AND_FASTAPI.ipynb" target="_blank" class="btn-demo">
-                  <i class="fa-solid fa-play"></i> View Notebook
+                  <i class="ph-bold ph-play"></i> View Notebook
                 </a>
                 <a href="https://github.com/sohail-ahmed-26/project_12" target="_blank" class="btn-github">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 16. AI Ads Maker -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="generative-ai">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/ai-ads-maker.png" alt="AI Ads Maker" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/ai-ads-maker" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -505,19 +524,19 @@
               <p class="proj-desc">AI-powered application designed to automate and generate creative marketing advertisements, enhancing content creation speed and efficiency.</p>
               <div class="proj-footer">
                 <a href="https://github.com/sohail-ahmed-26/ai-ads-maker" target="_blank" class="btn-github" style="width: 100%;">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 17. Job Analyzer -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="generative-ai">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/job_analyzer.png" alt="Job Analyzer" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/Job_Analyzer/tree/main/Resume-Cover-Letter-Maker" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -531,19 +550,19 @@
               <p class="proj-desc">An intelligent Generative AI tool to analyze job descriptions and match them with resumes, providing similarity scores and keyword extraction.</p>
               <div class="proj-footer">
                 <a href="https://github.com/sohail-ahmed-26/Job_Analyzer/tree/main/Resume-Cover-Letter-Maker" target="_blank" class="btn-github" style="width: 100%;">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <!-- 18. Social Media Content Rewriter -->
-          <div class="proj-card glass-card">
-            <div class="proj-img">
+          <div class="proj-card glass-card" data-category="generative-ai">
+            <div class="proj-img thumb-contain">
               <img src="assets/images/thumbnail/social_media_content_writer.png" alt="Social Media Content Rewriter" loading="lazy">
               <div class="proj-overlay">
                 <a href="https://github.com/sohail-ahmed-26/social_media_content_rewriter" target="_blank" class="proj-link-btn" title="View on GitHub">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
               </div>
             </div>
@@ -557,7 +576,7 @@
               <p class="proj-desc">A smart tool leveraging advanced language models to repurpose, optimize, and rewrite text for various social media platforms to maximize engagement.</p>
               <div class="proj-footer">
                 <a href="https://github.com/sohail-ahmed-26/social_media_content_rewriter" target="_blank" class="btn-github" style="width: 100%;">
-                  <i class="fa-brands fa-github"></i> GitHub
+                  <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub
                 </a>
               </div>
             </div>
@@ -574,16 +593,16 @@
       <div class="footer-inner" style="justify-content: center;">
         <div class="footer-socials">
           <a href="https://github.com/sohail-ahmed-26" target="_blank" class="soc-btn" aria-label="GitHub" title="GitHub">
-            <i class="fa-brands fa-github"></i>
+            <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;">
           </a>
           <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" class="soc-btn" aria-label="LinkedIn" title="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
+            <img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;">
           </a>
           <a href="https://www.instagram.com/sohailahmed5990" target="_blank" class="soc-btn" aria-label="Instagram" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+            <img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20">
           </a>
           <a href="https://x.com/ahmed241126" target="_blank" class="soc-btn" aria-label="Twitter / X" title="Twitter / X">
-            <i class="fa-brands fa-x-twitter"></i>
+            <img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20">
           </a>
         </div>
       </div>

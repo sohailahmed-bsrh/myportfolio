@@ -120,8 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Canvas Particle Network ─────────────────────────────────
   function initCanvasNetwork() {
     const canvas = document.getElementById('hero-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const fallback = document.getElementById('js-canvas-fallback');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (!canvas || prefersReducedMotion) {
+      if (canvas) canvas.style.display = 'none';
+      if (fallback) fallback.style.display = 'block';
+      return;
+    }
+
+    let ctx;
+    try {
+      ctx = canvas.getContext('2d');
+      if (!ctx) throw new Error('2D context not supported');
+    } catch (e) {
+      console.warn('Canvas initialization failed, using fallback:', e);
+      canvas.style.display = 'none';
+      if (fallback) fallback.style.display = 'block';
+      return;
+    }
+    
     let width, height;
     let particles = [];
     let isPaused = false;
@@ -350,25 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ── Contact Form Intercept ──────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for your message! (Note: This is a static demo. A backend like Formspree or FastAPI is required to actually send emails.)');
-      contactForm.reset();
-    });
-  }
-
-  // ── Accessibility: Reduced Motion for GSAP ───────────────────
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion && typeof gsap !== 'undefined') {
-    gsap.globalTimeline.timeScale(1000);
-  }
-});
-
-// ── Voice Greeting (Home Page Only) ───────────────────────
+// ── Contact Form Intercept ─────────────────────────// ── Voice Greeting (Home Page Only) ───────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const voiceToggleBtn = document.getElementById('voice-toggle');
   
@@ -389,69 +389,127 @@ document.addEventListener('DOMContentLoaded', () => {
     utterance.onend = () => {
       isPlaying = false;
       voiceToggleBtn.classList.remove('playing');
-      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+      voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
     };
 
     utterance.onerror = (e) => {
       isPlaying = false;
       voiceToggleBtn.classList.remove('playing');
-      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+      voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
     };
   } else {
     return;
   }
 
-  const hasPlayed = sessionStorage.getItem('greetingPlayed');
-
   const playGreeting = () => {
-    if (greetingTriggered || hasPlayed || !utterance) return;
+    if (greetingTriggered || !utterance) return;
     greetingTriggered = true;
-    sessionStorage.setItem('greetingPlayed', 'true');
     
-    // Ensure any previously stuck utterances are cleared before speaking
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
     
     isPlaying = true;
     voiceToggleBtn.classList.add('playing');
-    voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+    voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-high"></i>';
   };
 
   const stopGreeting = () => {
     window.speechSynthesis.cancel();
     isPlaying = false;
     voiceToggleBtn.classList.remove('playing');
-    voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-    greetingTriggered = true; 
-    sessionStorage.setItem('greetingPlayed', 'true');
+    voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
   };
 
-  // Wait for FIRST interaction (click/touch) to unlock audio
-  if (!hasPlayed) {
-    const triggerInteraction = (e) => {
-      // Don't trigger if they clicked the toggle button (it handles itself)
-      if (e.target.closest('#voice-toggle')) return;
-      playGreeting();
-      ['click', 'touchstart'].forEach(evt => {
-        document.removeEventListener(evt, triggerInteraction);
-      });
-    };
-    
-    ['click', 'touchstart'].forEach(evt => {
-      document.addEventListener(evt, triggerInteraction, { passive: true });
-    });
-  }
+  // Autoplay immediately on load (no user click required per instructions)
+  setTimeout(() => {
+    playGreeting();
+  }, 1000);
 
   // Toggle button manual control
   voiceToggleBtn.addEventListener('click', () => {
     if (isPlaying) {
       stopGreeting();
     } else {
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
-      isPlaying = true;
-      voiceToggleBtn.classList.add('playing');
-      voiceToggleBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+      greetingTriggered = false; // Allow replay
+      playGreeting();
     }
   });
+});
+
+  // ── Project Filtering Logic ───────────────────────────────
+  const filterBar = document.getElementById('project-filter-bar');
+  const projectsGrid = document.getElementById('projects-grid');
+  const emptyState = document.getElementById('projects-empty-state');
+  
+  if (filterBar && projectsGrid) {
+    const filterBtns = filterBar.querySelectorAll('.filter-btn:not(:disabled)');
+    const projects = projectsGrid.querySelectorAll('.proj-card');
+
+    const filterProjects = (category) => {
+      let visibleCount = 0;
+      projects.forEach(card => {
+        const categories = card.getAttribute('data-category');
+        if (!categories) return;
+        
+        const isMatch = category === 'all' || categories.split(' ').includes(category);
+        
+        if (isMatch) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+          visibleCount++;
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 300); // match var(--normal) transition duration
+        }
+      });
+      
+      // Empty state handling
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+        }
+      }
+      
+      // Update active button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      const activeBtn = Array.from(filterBtns).find(b => b.getAttribute('data-filter') === category) || filterBtns[0];
+      if (activeBtn) activeBtn.classList.add('active');
+
+      // Scroll filter bar to active button (mobile)
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+
+      // Update URL hash without jumping
+      history.replaceState(null, null, category === 'all' ? window.location.pathname : `#category=${category}`);
+    };
+
+    // Event listeners
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterProjects(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Check URL hash on load
+    const hash = window.location.hash;
+    if (hash.startsWith('#category=')) {
+      const category = hash.replace('#category=', '');
+      filterProjects(category);
+    } else {
+      // Initialize layout strictly
+      projects.forEach(card => {
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      });
+    }
+  }
+
 });

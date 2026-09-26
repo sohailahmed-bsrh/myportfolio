@@ -368,72 +368,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ── Contact Form Intercept ─────────────────────────// ── Voice Greeting (Home Page Only) ───────────────────────
+// ── Voice Greeting (Home Page Only) ───────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  const voiceToggleBtn = document.getElementById('voice-toggle');
-  
-  if (!voiceToggleBtn) return;
-
-  const GREETING_TEXT = "Hello, and welcome to my portfolio. I'm Sohail Ahmed, an AI Engineer specializing in data science and machine learning. Feel free to explore my work.";
-  let utterance = null;
-  let isPlaying = false;
-  let greetingTriggered = false;
-
-  if ('speechSynthesis' in window) {
-    utterance = new SpeechSynthesisUtterance(GREETING_TEXT);
-    utterance.volume = 0.8;
-    utterance.rate = 1.0;
+  // Only run on home page
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+    const GREETING_TEXT = "Hello, and welcome to my portfolio. I'm Sohail Ahmed, an AI Engineer specializing in data science and machine learning. Feel free to explore my work.";
     
-    voiceToggleBtn.classList.add('visible');
-
-    utterance.onend = () => {
-      isPlaying = false;
-      voiceToggleBtn.classList.remove('playing');
-      voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
-    };
-
-    utterance.onerror = (e) => {
-      isPlaying = false;
-      voiceToggleBtn.classList.remove('playing');
-      voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
-    };
-  } else {
-    return;
-  }
-
-  const playGreeting = () => {
-    if (greetingTriggered || !utterance) return;
-    greetingTriggered = true;
-    
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
-    
-    isPlaying = true;
-    voiceToggleBtn.classList.add('playing');
-    voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-high"></i>';
-  };
-
-  const stopGreeting = () => {
-    window.speechSynthesis.cancel();
-    isPlaying = false;
-    voiceToggleBtn.classList.remove('playing');
-    voiceToggleBtn.innerHTML = '<i class="ph-bold ph-speaker-slash"></i>';
-  };
-
-  // Autoplay immediately on load (no user click required per instructions)
-  setTimeout(() => {
-    playGreeting();
-  }, 1000);
-
-  // Toggle button manual control
-  voiceToggleBtn.addEventListener('click', () => {
-    if (isPlaying) {
-      stopGreeting();
-    } else {
-      greetingTriggered = false; // Allow replay
-      playGreeting();
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(GREETING_TEXT);
+      utterance.volume = 0.8;
+      utterance.rate = 1.0;
+      
+      // We log that autoplay might be blocked by the browser. 
+      // Most modern browsers block AudioContext/SpeechSynthesis before user interaction.
+      console.log("Attempting autoplay of voice greeting. Note: This may be blocked by browser autoplay policies without prior user interaction.");
+      
+      // Cancel any ongoing speech and try to speak immediately on load
+      window.speechSynthesis.cancel();
+      
+      // Short delay to ensure voices are loaded
+      setTimeout(() => {
+        window.speechSynthesis.speak(utterance);
+      }, 500);
     }
-  });
+  }
 });
 
   // ── Project Filtering Logic ───────────────────────────────
@@ -511,5 +469,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-
-});

@@ -5,43 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | Sohail Ahmed – AI Engineer</title>
   <meta name="description" content="Technical skills and AI expertise of Sohail Ahmed — Machine Learning, Deep Learning, Generative AI, Computer Vision, Python, FastAPI, Docker, and more.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="ph-bold ph-robot"></i></text></svg>">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="canonical" href="https://sohail.devsil.com/skills.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sohail.devsil.com/skills.html">
+  <meta property="og:title" content="Skills | Sohail Ahmed – AI Engineer">
+  <meta property="og:description" content="Comprehensive technical competencies and AI stack of Sohail Ahmed.">
+  <meta property="og:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sohail.devsil.com/skills.html">
+  <meta name="twitter:title" content="Skills | Sohail Ahmed – AI Engineer">
+  <meta name="twitter:description" content="Comprehensive technical competencies and AI stack of Sohail Ahmed.">
+  <meta name="twitter:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2026.2">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="ai-lab-mood">
+
+  <!-- FULL-SCREEN CURTAIN WIPE TRANSITION -->
+  <div class="page-curtain" id="page-curtain" aria-hidden="true">
+    <div class="curtain-layer curtain-primary"></div>
+    <div class="curtain-layer curtain-secondary"></div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>Sohail Ahmed</a>
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>Sohail Ahmed
+      </a>
       <ul class="nav-links">
         <li><a href="index.html"          class="nav-link">Home</a></li>
         <li><a href="about.html"          class="nav-link">About</a></li>
         <li><a href="resume.html"         class="nav-link">Resume</a></li>
         <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-        <li><a href="skills.html"         class="nav-link">Skills</a></li>
+        <li><a href="skills.html"         class="nav-link active">Skills</a></li>
         <li><a href="experience.html"     class="nav-link">Experience</a></li>
         <li><a href="projects.html"       class="nav-link">Projects</a></li>
         <li><a href="contact.html"        class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
-    <a href="resume.html" class="nav-link">Resume</a><a href="certifications.html" class="nav-link">Certifications</a>
-    <a href="skills.html" class="nav-link">Skills</a><a href="experience.html" class="nav-link">Experience</a>
-    <a href="projects.html" class="nav-link">Projects</a><a href="contact.html" class="nav-link">Contact</a>
-  </div>
+
+  <!-- SLIDE-IN SIDE PANEL (DRAWER) -->
+  <div class="nav-drawer-backdrop" id="nav-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="index.html" class="drawer-logo">
+        <span class="logo-dot"></span> Sohail Ahmed
+      </a>
+      <button class="drawer-close" id="drawer-close" aria-label="Close navigation menu">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span class="drawer-dot"></span> Home</a></li>
+        <li><a href="about.html" class="drawer-link"><span class="drawer-dot"></span> About</a></li>
+        <li><a href="resume.html" class="drawer-link"><span class="drawer-dot"></span> Resume</a></li>
+        <li><a href="certifications.html" class="drawer-link"><span class="drawer-dot"></span> Certifications</a></li>
+        <li><a href="skills.html" class="drawer-link active"><span class="drawer-dot"></span> Skills</a></li>
+        <li><a href="experience.html" class="drawer-link"><span class="drawer-dot"></span> Experience</a></li>
+        <li><a href="projects.html" class="drawer-link"><span class="drawer-dot"></span> Projects</a></li>
+        <li><a href="contact.html" class="drawer-link"><span class="drawer-dot"></span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <a href="assets/cv/Sohail_Ahmed_CV.pdf?v=20261120" download="Sohail_Ahmed_CV.pdf" class="btn btn-primary" style="justify-content:center;">
+        <i class="ph-bold ph-download-simple"></i>
+        Download CV
+      </a>
+      <div class="drawer-socials">
+        <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+        <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </aside>
 
   <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="container">
-      <p class="page-label gsap-reveal">My Technical Stack</p>
-      <h1 class="gsap-reveal">Skills Matrix</h1>
-      <p class="gsap-reveal">A comprehensive breakdown of my expertise across AI, Machine Learning, frameworks, deployment, and professional tools.</p>
+      <p class="page-label gsap-reveal">Engineering Competencies</p>
+      <h1 class="gsap-reveal text-gradient">Skills Matrix</h1>
+      <p class="gsap-reveal">A comprehensive breakdown of my expertise across AI architectures, Machine Learning pipelines, backend microservices, and MLOps deployment.</p>
     </div>
   </header>
 
@@ -49,178 +104,183 @@
   <main>
     <section class="section" style="padding-top: 0;">
       <div class="container">
-
         <div class="skills-dashboard">
 
-          <!-- AI & Data Science -->
+          <!-- 1. Machine Learning -->
           <div class="skill-category glass-card gsap-reveal">
             <h2>
-              <i class="ph-bold ph-circle"></i>
-              AI & Data Science
+              <i class="ph-bold ph-graph" style="color:var(--cyan);"></i>
+              Machine Learning
             </h2>
             <div class="skill-badges-container">
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-graph"></i> Machine Learning</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-network"></i> Deep Learning</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-magic-wand"></i> Generative AI</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-eye"></i> Computer Vision</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-robot"></i> AI Agents</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-link"></i> Agentic AI</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-book"></i> RAG</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-chats"></i> NLP</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-keyboard"></i> Prompt Engineering</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-chart-bar"></i> Data Analytics</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-magnifying-glass"></i> EDA</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-gear"></i> Feature Engineering</span>
-              <span class="skill-badge sk-ai"><i class="ph-bold ph-rocket-launch"></i> Model Deployment</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Supervised Learning</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Unsupervised Learning</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Scikit-learn</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Classification & Regression</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Random Forests & XGBoost</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Feature Engineering</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Cross-Validation</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Model Evaluation & Metrics</span>
             </div>
           </div>
 
-          <!-- Programming Languages -->
+          <!-- 2. Deep Learning -->
           <div class="skill-category glass-card gsap-reveal">
             <h2>
-              <i class="ph-bold ph-code"></i>
-              Programming Languages
+              <i class="ph-bold ph-network" style="color:var(--cyan);"></i>
+              Deep Learning
             </h2>
             <div class="skill-badges-container">
-              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/python/a1a1aa" alt="Python" width="18" height="18" style="vertical-align: middle;"> Python</span>
-              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/postgresql/a1a1aa" alt="SQL" width="18" height="18" style="vertical-align: middle;"> SQL</span>
-              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/javascript/a1a1aa" alt="JavaScript" width="18" height="18" style="vertical-align: middle;"> JavaScript</span>
-              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/html5/a1a1aa" alt="HTML/CSS" width="18" height="18" style="vertical-align: middle;"> HTML / CSS</span>
-              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/mathworks/a1a1aa" alt="MATLAB" width="18" height="18" style="vertical-align: middle;"> MATLAB (basics)</span>
-            </div>
-          </div>
-
-          <!-- Frameworks & Libraries -->
-          <div class="skill-category glass-card gsap-reveal">
-            <h2>
-              <i class="ph-bold ph-stack"></i>
-              Frameworks & Libraries
-            </h2>
-            <div class="skill-badges-container">
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/tensorflow/a1a1aa" alt="TensorFlow" width="18" height="18" style="vertical-align: middle;"> TensorFlow</span>
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/pytorch/a1a1aa" alt="PyTorch" width="18" height="18" style="vertical-align: middle;"> PyTorch</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/scikitlearn/a1a1aa" alt="Scikit-learn" width="18" height="18" style="vertical-align: middle;"> Scikit-learn</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/langchain/a1a1aa" alt="LangChain" width="18" height="18" style="vertical-align: middle;"> LangChain</span>
+              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/tensorflow/a1a1aa" alt="TensorFlow" width="18" height="18" style="vertical-align: middle;"> TensorFlow / Keras</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Convolutional Neural Networks (CNN)</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Recurrent Neural Networks (RNN & LSTM)</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Transfer Learning</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Autoencoders</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Loss Optimization</span>
+            </div>
+          </div>
+
+          <!-- 3. Computer Vision -->
+          <div class="skill-category glass-card gsap-reveal">
+            <h2>
+              <i class="ph-bold ph-eye" style="color:var(--cyan);"></i>
+              Computer Vision
+            </h2>
+            <div class="skill-badges-container">
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/opencv/a1a1aa" alt="OpenCV" width="18" height="18" style="vertical-align: middle;"> OpenCV</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> YOLOv8 Object Detection</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Facial Recognition Systems</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Real-time Video Stream Inference</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Edge & Contour Detection</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Perspective Transform & OCR</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Image Augmentation</span>
+            </div>
+          </div>
+
+          <!-- 4. NLP & Large Language Models -->
+          <div class="skill-category glass-card gsap-reveal">
+            <h2>
+              <i class="ph-bold ph-chats" style="color:var(--cyan);"></i>
+              NLP & Large Language Models (LLMs)
+            </h2>
+            <div class="skill-badges-container">
+              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/huggingface/a1a1aa" alt="Hugging Face" width="18" height="18" style="vertical-align: middle;"> Hugging Face Transformers</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Text Preprocessing & Tokenization</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Sentiment Analysis</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Named Entity Recognition (NER)</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Text Embeddings</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> LLM Fine-Tuning & Quantization</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Prompt Engineering</span>
+            </div>
+          </div>
+
+          <!-- 5. Generative AI, RAG & Autonomous Agents -->
+          <div class="skill-category glass-card gsap-reveal">
+            <h2>
+              <i class="ph-bold ph-magic-wand" style="color:var(--cyan);"></i>
+              Generative AI, RAG & Autonomous Agents
+            </h2>
+            <div class="skill-badges-container">
+              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/langchain/a1a1aa" alt="LangChain" width="18" height="18" style="vertical-align: middle;"> LangChain</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Retrieval-Augmented Generation (RAG)</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Autonomous AI Agents</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Multi-Agent Swarms</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Context Injection & Semantic Search</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Synthetic Content Generation</span>
+            </div>
+          </div>
+
+          <!-- 6. Data Science, Analytics & Visualization -->
+          <div class="skill-category glass-card gsap-reveal">
+            <h2>
+              <i class="ph-bold ph-chart-bar" style="color:var(--cyan);"></i>
+              Data Science & Analytics
+            </h2>
+            <div class="skill-badges-container">
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/pandas/a1a1aa" alt="Pandas" width="18" height="18" style="vertical-align: middle;"> Pandas</span>
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/numpy/a1a1aa" alt="NumPy" width="18" height="18" style="vertical-align: middle;"> NumPy</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/scipy/a1a1aa" alt="Matplotlib" width="18" height="18" style="vertical-align: middle;"> Matplotlib / Seaborn</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/streamlit/a1a1aa" alt="Streamlit" width="18" height="18" style="vertical-align: middle;"> Streamlit</span>
+              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/scipy/a1a1aa" alt="Matplotlib" width="18" height="18" style="vertical-align: middle;"> Matplotlib & Seaborn</span>
+              <span class="skill-badge sk-fw"><i class="ph-bold ph-chart-bar" style="color:var(--cyan);"></i> Power BI</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Exploratory Data Analysis (EDA)</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Statistical Testing</span>
+              <span class="skill-badge sk-ai"><i class="ph-bold ph-check"></i> Time Series Analysis</span>
+            </div>
+          </div>
+
+          <!-- 7. Backend, APIs & Cloud Deployment -->
+          <div class="skill-category glass-card gsap-reveal">
+            <h2>
+              <i class="ph-bold ph-cloud" style="color:var(--cyan);"></i>
+              Backend, APIs & Cloud Deployment
+            </h2>
+            <div class="skill-badges-container">
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/fastapi/a1a1aa" alt="FastAPI" width="18" height="18" style="vertical-align: middle;"> FastAPI</span>
               <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/flask/a1a1aa" alt="Flask" width="18" height="18" style="vertical-align: middle;"> Flask</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/huggingface/a1a1aa" alt="Hugging Face" width="18" height="18" style="vertical-align: middle;"> Hugging Face</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/react/a1a1aa" alt="React" width="18" height="18" style="vertical-align: middle;"> React (basics)</span>
-              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/powerbi/a1a1aa" alt="Power BI" width="18" height="18" style="vertical-align: middle;"> Power BI</span>
-            </div>
-          </div>
-
-          <!-- Deployment & Cloud -->
-          <div class="skill-category glass-card gsap-reveal">
-            <h2>
-              <i class="ph-bold ph-cloud"></i>
-              Deployment & Cloud
-            </h2>
-            <div class="skill-badges-container">
+              <span class="skill-badge sk-fw"><img src="https://cdn.simpleicons.org/streamlit/a1a1aa" alt="Streamlit" width="18" height="18" style="vertical-align: middle;"> Streamlit</span>
               <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/docker/a1a1aa" alt="Docker" width="18" height="18" style="vertical-align: middle;"> Docker</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/amazonaws/a1a1aa" alt="AWS" width="18" height="18" style="vertical-align: middle;"> AWS (basics)</span>
+              <span class="skill-badge sk-cloud"><i class="fa-brands fa-aws" style="color:var(--cyan);font-size:1.1rem;"></i> AWS Cloud</span>
               <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/render/a1a1aa" alt="Render" width="18" height="18" style="vertical-align: middle;"> Render</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/streamlit/a1a1aa" alt="Streamlit Cloud" width="18" height="18" style="vertical-align: middle;"> Streamlit Cloud</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub Pages" width="18" height="18" style="vertical-align: middle;"> GitHub Pages</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/railway/a1a1aa" alt="Railway" width="18" height="18" style="vertical-align: middle;"> Railway</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/linux/a1a1aa" alt="MLOps" width="18" height="18" style="vertical-align: middle;"> MLOps</span>
-              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/githubactions/a1a1aa" alt="CI/CD" width="18" height="18" style="vertical-align: middle;"> CI/CD (basics)</span>
+              <span class="skill-badge sk-cloud"><img src="https://cdn.simpleicons.org/githubactions/a1a1aa" alt="CI/CD" width="18" height="18" style="vertical-align: middle;"> CI/CD Workflows</span>
             </div>
           </div>
 
-          <!-- Databases & Vector Stores -->
+          <!-- 8. Databases, Vector Stores & Tools -->
           <div class="skill-category glass-card gsap-reveal">
             <h2>
-              <i class="ph-bold ph-database"></i>
-              Databases & Vector Stores
+              <i class="ph-bold ph-database" style="color:var(--cyan);"></i>
+              Databases, Vector Stores & Tools
             </h2>
             <div class="skill-badges-container">
+              <span class="skill-badge sk-db"><i class="ph-bold ph-database" style="color:var(--cyan);"></i> ChromaDB</span>
+              <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/meta/a1a1aa" alt="FAISS" width="18" height="18" style="vertical-align: middle;"> FAISS Vector Store</span>
               <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/postgresql/a1a1aa" alt="PostgreSQL" width="18" height="18" style="vertical-align: middle;"> PostgreSQL</span>
               <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/mysql/a1a1aa" alt="MySQL" width="18" height="18" style="vertical-align: middle;"> MySQL</span>
               <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/mongodb/a1a1aa" alt="MongoDB" width="18" height="18" style="vertical-align: middle;"> MongoDB</span>
-              <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/chroma/a1a1aa" alt="ChromaDB" width="18" height="18" style="vertical-align: middle;"> ChromaDB</span>
-              <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/meta/a1a1aa" alt="FAISS" width="18" height="18" style="vertical-align: middle;"> FAISS</span>
-              <span class="skill-badge sk-db"><img src="https://cdn.simpleicons.org/pinecone/a1a1aa" alt="Pinecone" width="18" height="18" style="vertical-align: middle;"> Pinecone (basics)</span>
-            </div>
-          </div>
-
-          <!-- Professional Tools -->
-          <div class="skill-category glass-card gsap-reveal">
-            <h2>
-              <i class="ph-bold ph-wrench"></i>
-              Professional Tools
-            </h2>
-            <div class="skill-badges-container">
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/visualstudiocode/a1a1aa" alt="VS Code" width="18" height="18" style="vertical-align: middle;"> VS Code</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/jupyter/a1a1aa" alt="Jupyter Notebook" width="18" height="18" style="vertical-align: middle;"> Jupyter Notebook</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="18" height="18" style="vertical-align: middle;"> Git & GitHub</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/powerbi/a1a1aa" alt="Power BI" width="18" height="18" style="vertical-align: middle;"> Power BI</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/googlecolab/a1a1aa" alt="Google Colab" width="18" height="18" style="vertical-align: middle;"> Google Colab</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/kaggle/a1a1aa" alt="Kaggle" width="18" height="18" style="vertical-align: middle;"> Kaggle</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/notion/a1a1aa" alt="Notion" width="18" height="18" style="vertical-align: middle;"> Notion</span>
-              <span class="skill-badge sk-tool"><img src="https://cdn.simpleicons.org/ubuntu/a1a1aa" alt="Linux (Ubuntu)" width="18" height="18" style="vertical-align: middle;"> Linux (Ubuntu)</span>
-            </div>
-          </div>
-
-          <!-- Soft Skills -->
-          <div class="skill-category glass-card gsap-reveal">
-            <h2>
-              <i class="ph-bold ph-circle"></i>
-              Soft Skills
-            </h2>
-            <div class="skill-badges-container">
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-lightbulb"></i> Problem Solving</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-chats"></i> Communication</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-users"></i> Team Collaboration</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-target"></i> Critical Thinking</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-clock"></i> Time Management</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-presentation-chart"></i> Presentation</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-shuffle"></i> Adaptability</span>
-              <span class="skill-badge sk-soft"><i class="ph-bold ph-rocket-launch"></i> Self-Motivated</span>
+              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/git/a1a1aa" alt="Git" width="18" height="18" style="vertical-align: middle;"> Git & GitHub</span>
+              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/python/a1a1aa" alt="Python" width="18" height="18" style="vertical-align: middle;"> Python 3.x</span>
+              <span class="skill-badge sk-prog"><img src="https://cdn.simpleicons.org/linux/a1a1aa" alt="Linux" width="18" height="18" style="vertical-align: middle;"> Linux / Bash</span>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   </main>
+
+  <!-- LIGHTBOX PREVIEW MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Full preview">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner" style="justify-content: center;">
         <div class="footer-socials">
-          <a href="https://github.com/sohail-ahmed-26" target="_blank" class="soc-btn" aria-label="GitHub" title="GitHub">
-            <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" class="soc-btn" aria-label="LinkedIn" title="LinkedIn">
-            <img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" class="soc-btn" aria-label="Instagram" title="Instagram">
-            <img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20">
-          </a>
-          <a href="https://x.com/ahmed241126" target="_blank" class="soc-btn" aria-label="Twitter / X" title="Twitter / X">
-            <img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20">
-          </a>
+          <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <p class="footer-copy">&copy; 2026 Sohail Ahmed · Mansehra, KPK, Pakistan · All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Back to Top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  
+  <script src="./assets/js/main.js?v=2026.2"></script>
 </body>
 </html>

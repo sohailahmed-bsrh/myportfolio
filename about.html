@@ -5,20 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Sohail Ahmed – AI Engineer</title>
   <meta name="description" content="Learn about Sohail Ahmed's professional journey, mission, and AI expertise — AI Engineer Intern at Devsil with experience in ML, LLMs, Computer Vision, and RAG.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="ph-bold ph-robot"></i></text></svg>">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="canonical" href="https://sohail.devsil.com/about.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sohail.devsil.com/about.html">
+  <meta property="og:title" content="About | Sohail Ahmed – AI Engineer">
+  <meta property="og:description" content="Professional journey, AI research focus, and background of Sohail Ahmed.">
+  <meta property="og:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sohail.devsil.com/about.html">
+  <meta name="twitter:title" content="About | Sohail Ahmed – AI Engineer">
+  <meta name="twitter:description" content="Professional journey, AI research focus, and background of Sohail Ahmed.">
+  <meta name="twitter:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2026.2">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="ai-lab-mood">
+
+  <!-- FULL-SCREEN CURTAIN WIPE TRANSITION -->
+  <div class="page-curtain" id="page-curtain" aria-hidden="true">
+    <div class="curtain-layer curtain-primary"></div>
+    <div class="curtain-layer curtain-secondary"></div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>Sohail Ahmed</a>
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>Sohail Ahmed
+      </a>
       <ul class="nav-links">
         <li><a href="index.html"          class="nav-link">Home</a></li>
-        <li><a href="about.html"          class="nav-link">About</a></li>
+        <li><a href="about.html"          class="nav-link active">About</a></li>
         <li><a href="resume.html"         class="nav-link">Resume</a></li>
         <li><a href="certifications.html" class="nav-link">Certifications</a></li>
         <li><a href="skills.html"         class="nav-link">Skills</a></li>
@@ -26,21 +48,54 @@
         <li><a href="projects.html"       class="nav-link">Projects</a></li>
         <li><a href="contact.html"        class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
-    <a href="resume.html" class="nav-link">Resume</a><a href="certifications.html" class="nav-link">Certifications</a>
-    <a href="skills.html" class="nav-link">Skills</a><a href="experience.html" class="nav-link">Experience</a>
-    <a href="projects.html" class="nav-link">Projects</a><a href="contact.html" class="nav-link">Contact</a>
-  </div>
+
+  <!-- SLIDE-IN SIDE PANEL (DRAWER) -->
+  <div class="nav-drawer-backdrop" id="nav-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="index.html" class="drawer-logo">
+        <span class="logo-dot"></span> Sohail Ahmed
+      </a>
+      <button class="drawer-close" id="drawer-close" aria-label="Close navigation menu">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span class="drawer-dot"></span> Home</a></li>
+        <li><a href="about.html" class="drawer-link active"><span class="drawer-dot"></span> About</a></li>
+        <li><a href="resume.html" class="drawer-link"><span class="drawer-dot"></span> Resume</a></li>
+        <li><a href="certifications.html" class="drawer-link"><span class="drawer-dot"></span> Certifications</a></li>
+        <li><a href="skills.html" class="drawer-link"><span class="drawer-dot"></span> Skills</a></li>
+        <li><a href="experience.html" class="drawer-link"><span class="drawer-dot"></span> Experience</a></li>
+        <li><a href="projects.html" class="drawer-link"><span class="drawer-dot"></span> Projects</a></li>
+        <li><a href="contact.html" class="drawer-link"><span class="drawer-dot"></span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <a href="assets/cv/Sohail_Ahmed_CV.pdf?v=20261120" download="Sohail_Ahmed_CV.pdf" class="btn btn-primary" style="justify-content:center;">
+        <i class="ph-bold ph-download-simple"></i>
+        Download CV
+      </a>
+      <div class="drawer-socials">
+        <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+        <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </aside>
 
   <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="container">
       <p class="page-label gsap-reveal">Who I Am</p>
-      <h1 class="gsap-reveal">About Me</h1>
+      <h1 class="gsap-reveal text-gradient">About Me</h1>
       <p class="gsap-reveal">My professional journey, mission, and vision in Artificial Intelligence.</p>
     </div>
   </header>
@@ -51,107 +106,117 @@
       <div class="container">
         <div class="about-body">
 
-          <!-- Main Text -->
+          <!-- Main Text Column -->
           <div class="about-text gsap-reveal">
             <p>
-              I work as a <strong>Data Scientist</strong> and <strong>AI Engineer</strong>. My passion lies in solving complex, real-world problems through the intelligent use of data and machine learning. I specialize in building end-to-end AI pipelines — from data preprocessing and model training to deployment and integration into production systems.
+              I work as a <strong>Data Scientist</strong> and <strong>AI Engineer</strong>. My passion lies in solving complex, real-world problems through the intelligent application of machine learning and modern data pipelines. I specialize in building end-to-end AI systems — spanning exploratory data analysis, neural architecture design, and model fine-tuning to containerized deployment in production environments.
             </p>
             <p>
-              Currently, I am working as a <strong>Full Stack AI Engineer Intern at Devsil</strong>, where I develop production-ready AI systems and intelligent automation tools. Over 7 months, I have contributed to a wide range of real projects spanning Computer Vision, LLM integration, RAG pipelines, and FastAPI-powered backends.
+              Currently, I am working as a <strong>Full Stack AI Engineer Intern at Devsil</strong>, where I develop production-ready AI systems and intelligent automation workflows. Over 7 months of intensive development, I have contributed across Computer Vision applications, LLM integration, RAG pipelines, and FastAPI-powered microservices.
             </p>
             <p>
-              I am particularly focused on the frontier of <strong>Generative AI</strong>, working with Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Agentic AI systems. My goal is to bridge the gap between cutting-edge AI research and practical, measurable business value.
+              I am particularly focused on the frontier of <strong>Generative AI</strong>, working with Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Agentic AI systems. My goal is to bridge the gap between cutting-edge AI research and tangible, measurable business ROI.
             </p>
 
-            <div class="about-quote"><strong>My Mission:</strong> To build robust, production-ready AI systems that automate intelligent workflows and generate real business impact — without overfitting, without shortcuts.</div>
-            <div class="about-quote"><strong>My Vision:</strong> To be at the forefront of the Agentic AI revolution, architecting multi-agent systems that empower humans by handling complex computational tasks autonomously.</div>
+            <div class="about-quote">
+              <strong>My Mission:</strong> To build robust, production-ready AI systems that automate intelligent workflows and generate real business impact — without overfitting, without shortcuts.
+            </div>
+            <div class="about-quote">
+              <strong>My Vision:</strong> To be at the forefront of the Agentic AI revolution, architecting multi-agent systems that empower humans by handling complex computational and decision-making tasks autonomously.
+            </div>
 
-            <!-- Expanded Services -->
+            <!-- Focus Domains -->
             <div style="margin-top: 3.5rem;">
-              <p class="section-label">What I Do</p>
-              <h2 class="section-title">My Expertise</h2>
+              <p class="section-label">Core Specializations</p>
+              <h2 class="section-title">My Technical Focus</h2>
             </div>
 
             <div class="service-grid-lg gsap-stagger">
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-graph" style="color:var(--cyan);"></i></div>
                 <h4>Machine Learning</h4>
                 <p>Training robust, highly-accurate AI models avoiding overfitting issues.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-magic-wand" style="color:var(--cyan);"></i></div>
                 <h4>Generative AI</h4>
-                <p>Developing custom LLM solutions and intelligent conversation agents.</p>
+                <p>Developing custom LLM solutions and intelligent conversational agents.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12a9 3 0 0 0 18 0"/><path d="m15 12-3 3-3-3"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-database" style="color:var(--cyan);"></i></div>
                 <h4>RAG Systems</h4>
                 <p>Building context-aware Retrieval-Augmented Generation pipelines.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-eye" style="color:var(--cyan);"></i></div>
                 <h4>Computer Vision</h4>
                 <p>Implementing real-time object detection and facial recognition.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-chart-bar" style="color:var(--cyan);"></i></div>
                 <h4>Data Science</h4>
                 <p>Extracting actionable business insights from complex raw data.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8M8 14h4"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-chats" style="color:var(--cyan);"></i></div>
                 <h4>NLP</h4>
-                <p>Extracting meaning and sentiment from unstructured text data.</p>
+                <p>Extracting meaning and semantic intent from unstructured text corpora.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg></div>
+                <div class="svc-icon"><i class="ph-bold ph-robot" style="color:var(--cyan);"></i></div>
                 <h4>AI Agents</h4>
-                <p>Architecting multi-agent systems that autonomously solve tasks.</p>
+                <p>Architecting multi-agent systems that autonomously solve multi-step tasks.</p>
               </div>
               <div class="service-card-sm glass-card">
-                <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-                <h4>FastAPI Dev</h4>
+                <div class="svc-icon"><i class="ph-bold ph-hard-drives" style="color:var(--cyan);"></i></div>
+                <h4>FastAPI Development</h4>
                 <p>Deploying machine learning models via high-performance REST APIs.</p>
               </div>
             </div>
           </div>
 
-          <!-- Sidebar -->
+          <!-- HUD-Style Profile Sidebar -->
           <div class="about-sidebar">
-            <div class="sidebar-card glass-card gsap-reveal">
-              <div style="text-align: center; margin-bottom: 1.5rem;"><div class="profile-ring" style="width: 200px; height: 200px; margin: 0 auto 1.5rem;">
-              <div class="profile-inner">
-                <img src="assets/images/sohail2.jpeg" alt="Sohail Ahmed">
+            <div class="hud-profile-card glass-card gsap-reveal">
+              <div style="text-align: center; margin-bottom: 1.5rem;">
+                <div class="profile-ring" style="width: 190px; height: 190px; margin: 0 auto 1.5rem;">
+                  <div class="profile-inner">
+                    <picture>
+                      <source srcset="assets/images/sohail2.webp" type="image/webp">
+                      <img src="assets/images/sohail2.jpeg" alt="Sohail Ahmed - AI Engineer" width="190" height="237" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
               </div>
-            </div></div>
-              <h3>Personal Info</h3>
+
+              <h3 style="font-size:1.15rem; margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem;">
+                <i class="ph-bold ph-identification-card" style="color:var(--cyan);"></i> Engineer Profile
+              </h3>
               <div class="info-row"><span class="label"><i class="ph-bold ph-user"></i> Name</span><span class="val">Sohail Ahmed</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-cake"></i> Birthday</span><span class="val">March 03, 2005</span></div>
               <div class="info-row"><span class="label"><i class="ph-bold ph-map-pin"></i> Location</span><span class="val">Mansehra, KPK, PK</span></div>
+              <div class="info-row"><span class="label"><i class="ph-bold ph-target"></i> Focus</span><span class="val">AI & Data Science</span></div>
               <div class="info-row"><span class="label"><i class="ph-bold ph-envelope"></i> Email</span><span class="val"><a href="mailto:ahmed241126@gmail.com">ahmed241126@gmail.com</a></span></div>
               <div class="info-row"><span class="label"><i class="ph-bold ph-phone"></i> Phone</span><span class="val"><a href="tel:+923295619719">+92 329 5619719</a></span></div>
             </div>
-            <div class="sidebar-card glass-card gsap-reveal">
-              <h3>Connect</h3>
-              <div class="info-row"><span class="label"><img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;"> GitHub</span><span class="val"><a href="https://github.com/sohail-ahmed-26" target="_blank">sohail-ahmed-26</a></span></div>
-              <div class="info-row"><span class="label"><img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;"> LinkedIn</span><span class="val"><a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank">sohail-ahmed-devsil</a></span></div>
-              <div class="info-row"><span class="label"><img src="https://cdn.simpleicons.org/kaggle/a1a1aa" alt="Kaggle" width="20" height="20"> Kaggle</span><span class="val"><a href="https://www.kaggle.com/sohail2411126" target="_blank">sohail2411126</a></span></div>
-              <div class="info-row"><span class="label"><img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20"> Instagram</span><span class="val"><a href="https://www.instagram.com/sohailahmed5990" target="_blank">sohailahmed5990</a></span></div>
-              <div class="info-row"><span class="label"><img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20"> Twitter/X</span><span class="val"><a href="https://x.com/ahmed241126" target="_blank">ahmed241126</a></span></div>
+
+            <div class="sidebar-card glass-card gsap-reveal" style="margin-top: 1.5rem;">
+              <h3 style="font-size:1.15rem; margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem;">
+                <i class="ph-bold ph-graduation-cap" style="color:var(--cyan);"></i> Academic Credentials
+              </h3>
+              <div class="info-row"><span class="label">Degree</span><span class="val">BS Telecom Eng.</span></div>
+              <div class="info-row"><span class="label">University</span><span class="val">Hazara University</span></div>
+              <div class="info-row"><span class="label">Progress</span><span class="val">4th Sem. Completed</span></div>
+              <div class="info-row"><span class="label">CGPA</span><span class="val" style="color:var(--cyan);font-weight:700;">3.72 / 4.00</span></div>
             </div>
-            <div class="sidebar-card glass-card gsap-reveal">
-              <h3>Education</h3>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-graduation-cap"></i> Degree</span><span class="val">BS Telecom Eng.</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-buildings"></i> University</span><span class="val">Hazara University</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-info"></i> Status</span><span class="val">4th Sem. Completed</span></div>
-              <div class="info-row"><span class="label">CGPA</span><span class="val">3.72 / 4.00</span></div>
-            </div>
-            <div class="sidebar-card glass-card gsap-reveal">
-              <h3>Current Role</h3>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-buildings"></i> Company</span><span class="val">Devsil</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-briefcase"></i> Position</span><span class="val">AI Engineer Intern</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-clock"></i> Duration</span><span class="val">7 Months</span></div>
-              <div class="info-row"><span class="label"><i class="ph-bold ph-check-circle"></i> Status</span><span class="val" style="color:var(--cyan);">● Active</span></div>
+
+            <div class="sidebar-card glass-card gsap-reveal" style="margin-top: 1.5rem;">
+              <h3 style="font-size:1.15rem; margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.5rem;">
+                <i class="ph-bold ph-briefcase" style="color:var(--cyan);"></i> Current Engagement
+              </h3>
+              <div class="info-row"><span class="label">Company</span><span class="val">Devsil</span></div>
+              <div class="info-row"><span class="label">Position</span><span class="val">AI Engineer Intern</span></div>
+              <div class="info-row"><span class="label">Tenure</span><span class="val">7 Months</span></div>
+              <div class="info-row"><span class="label">Status</span><span class="val" style="color:var(--cyan);font-weight:700;">● Active</span></div>
             </div>
           </div>
 
@@ -160,37 +225,39 @@
     </section>
   </main>
 
+  <!-- LIGHTBOX PREVIEW MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Full preview">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner" style="justify-content: center;">
         <div class="footer-socials">
-          <a href="https://github.com/sohail-ahmed-26" target="_blank" class="soc-btn" aria-label="GitHub" title="GitHub">
-            <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" class="soc-btn" aria-label="LinkedIn" title="LinkedIn">
-            <img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" class="soc-btn" aria-label="Instagram" title="Instagram">
-            <img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20">
-          </a>
-          <a href="https://x.com/ahmed241126" target="_blank" class="soc-btn" aria-label="Twitter / X" title="Twitter / X">
-            <img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20">
-          </a>
+          <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <p class="footer-copy">&copy; 2026 Sohail Ahmed · Mansehra, KPK, Pakistan · All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Back to Top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  
+  <script src="./assets/js/main.js?v=2026.2"></script>
 </body>
 </html>

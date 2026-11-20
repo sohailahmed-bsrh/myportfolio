@@ -5,43 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Sohail Ahmed – AI Engineer</title>
   <meta name="description" content="Professional experience of Sohail Ahmed — AI Engineer Intern at Devsil for 7 months, building production AI systems.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>"><text y='.9em' font-size='90'><i class="ph-bold ph-robot"></i></text></svg>">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="canonical" href="https://sohail.devsil.com/experience.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sohail.devsil.com/experience.html">
+  <meta property="og:title" content="Experience | Sohail Ahmed – AI Engineer">
+  <meta property="og:description" content="Professional experience and production AI engineering roles held by Sohail Ahmed.">
+  <meta property="og:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sohail.devsil.com/experience.html">
+  <meta name="twitter:title" content="Experience | Sohail Ahmed – AI Engineer">
+  <meta name="twitter:description" content="Professional experience and production AI engineering roles held by Sohail Ahmed.">
+  <meta name="twitter:image" content="https://sohail.devsil.com/assets/images/sohail1.jpeg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2306b6d4' d='M256 0c-74.6 0-135 60.4-135 135V248c-39.8 0-72 32.2-72 72v80c0 39.8 32.2 72 72 72h270c39.8 0 72-32.2 72-72v-80c0-39.8-32.2-72-72-72V135C391 60.4 330.6 0 256 0zM176 135c0-44.2 35.8-80 80-80s80 35.8 80 80v113H176V135z'/></svg>">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2026.2">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+  <!-- FULL-SCREEN CURTAIN WIPE TRANSITION -->
+  <div class="page-curtain" id="page-curtain" aria-hidden="true">
+    <div class="curtain-layer curtain-primary"></div>
+    <div class="curtain-layer curtain-secondary"></div>
+  </div>
+
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>Sohail Ahmed</a>
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>Sohail Ahmed
+      </a>
       <ul class="nav-links">
         <li><a href="index.html"          class="nav-link">Home</a></li>
         <li><a href="about.html"          class="nav-link">About</a></li>
         <li><a href="resume.html"         class="nav-link">Resume</a></li>
         <li><a href="certifications.html" class="nav-link">Certifications</a></li>
         <li><a href="skills.html"         class="nav-link">Skills</a></li>
-        <li><a href="experience.html"     class="nav-link">Experience</a></li>
+        <li><a href="experience.html"     class="nav-link active">Experience</a></li>
         <li><a href="projects.html"       class="nav-link">Projects</a></li>
         <li><a href="contact.html"        class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
-    <a href="resume.html" class="nav-link">Resume</a><a href="certifications.html" class="nav-link">Certifications</a>
-    <a href="skills.html" class="nav-link">Skills</a><a href="experience.html" class="nav-link">Experience</a>
-    <a href="projects.html" class="nav-link">Projects</a><a href="contact.html" class="nav-link">Contact</a>
-  </div>
+
+  <!-- SLIDE-IN SIDE PANEL (DRAWER) -->
+  <div class="nav-drawer-backdrop" id="nav-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="index.html" class="drawer-logo">
+        <span class="logo-dot"></span> Sohail Ahmed
+      </a>
+      <button class="drawer-close" id="drawer-close" aria-label="Close navigation menu">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span class="drawer-dot"></span> Home</a></li>
+        <li><a href="about.html" class="drawer-link"><span class="drawer-dot"></span> About</a></li>
+        <li><a href="resume.html" class="drawer-link"><span class="drawer-dot"></span> Resume</a></li>
+        <li><a href="certifications.html" class="drawer-link"><span class="drawer-dot"></span> Certifications</a></li>
+        <li><a href="skills.html" class="drawer-link"><span class="drawer-dot"></span> Skills</a></li>
+        <li><a href="experience.html" class="drawer-link active"><span class="drawer-dot"></span> Experience</a></li>
+        <li><a href="projects.html" class="drawer-link"><span class="drawer-dot"></span> Projects</a></li>
+        <li><a href="contact.html" class="drawer-link"><span class="drawer-dot"></span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <a href="assets/cv/Sohail_Ahmed_CV.pdf?v=20261120" download="Sohail_Ahmed_CV.pdf" class="btn btn-primary" style="justify-content:center;">
+        <i class="ph-bold ph-download-simple"></i>
+        Download CV
+      </a>
+      <div class="drawer-socials">
+        <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+        <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </aside>
 
   <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="container">
-      <p class="page-label gsap-reveal">Professional Journey</p>
-      <h1 class="gsap-reveal">Experience</h1>
-      <p class="gsap-reveal">My hands-on experience building AI systems in a professional environment.</p>
+      <p class="page-label gsap-reveal">Professional Career</p>
+      <h1 class="gsap-reveal text-gradient">Experience</h1>
+      <p class="gsap-reveal">Hands-on experience architecting and shipping AI systems in a production software environment.</p>
     </div>
   </header>
 
@@ -50,17 +105,17 @@
     <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="exp-wrapper gsap-reveal">
-          <div class="exp-card">
+          <div class="exp-card glass-card">
             <div class="exp-badge">
               <span class="dot"></span> Currently Active · 7 Months
             </div>
             <div class="exp-role">AI Engineer Intern (Full Stack AI)</div>
             <div class="exp-company">Devsil · Mansehra, KPK, Pakistan</div>
             <p class="exp-desc">
-              Working as a Full Stack AI Engineer Intern at <strong>Devsil</strong>, contributing to the design, development, and deployment of production-grade AI systems. My work spans the complete AI pipeline — from data ingestion and preprocessing through model training to API deployment and integration into real-world applications.
+              Working as a Full Stack AI Engineer Intern at <strong>Devsil</strong>, contributing to the architecture, development, and deployment of production-grade AI systems. My work covers the complete model lifecycle — from data ingestion, cleaning, and preprocessing through model training and fine-tuning to high-throughput REST API serving with FastAPI.
             </p>
             <p class="exp-desc">
-              Key responsibilities include: building and fine-tuning machine learning models, implementing Retrieval-Augmented Generation (RAG) pipelines using LangChain and vector databases, developing RESTful APIs with FastAPI, creating Computer Vision applications for real-time use cases, and collaborating with cross-functional teams to deliver business-ready AI solutions.
+              Key responsibilities include: building and fine-tuning machine learning models, implementing Retrieval-Augmented Generation (RAG) pipelines using LangChain and vector databases, developing asynchronous REST APIs with FastAPI, creating Computer Vision models with OpenCV and YOLO for real-time video inference, and collaborating with cross-functional engineering teams to deliver robust enterprise solutions.
             </p>
             <div class="exp-skills">
               <span class="exp-skill">Python</span>
@@ -82,37 +137,39 @@
     </section>
   </main>
 
+  <!-- LIGHTBOX PREVIEW MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Full preview">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner" style="justify-content: center;">
         <div class="footer-socials">
-          <a href="https://github.com/sohail-ahmed-26" target="_blank" class="soc-btn" aria-label="GitHub" title="GitHub">
-            <img src="https://cdn.simpleicons.org/github/a1a1aa" alt="GitHub" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" class="soc-btn" aria-label="LinkedIn" title="LinkedIn">
-            <img src="https://cdn.simpleicons.org/linkedin/a1a1aa" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;">
-          </a>
-          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" class="soc-btn" aria-label="Instagram" title="Instagram">
-            <img src="https://cdn.simpleicons.org/instagram/a1a1aa" alt="Instagram" width="20" height="20">
-          </a>
-          <a href="https://x.com/ahmed241126" target="_blank" class="soc-btn" aria-label="Twitter / X" title="Twitter / X">
-            <img src="https://cdn.simpleicons.org/x/a1a1aa" alt="X (Twitter)" width="20" height="20">
-          </a>
+          <a href="https://github.com/sohail-ahmed-26" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sohail-ahmed-devsil" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Kaggle" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+          <a href="https://www.instagram.com/sohailahmed5990" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/ahmed241126" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <p class="footer-copy">&copy; 2026 Sohail Ahmed · Mansehra, KPK, Pakistan · All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Back to Top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  
+  <script src="./assets/js/main.js?v=2026.2"></script>
 </body>
 </html>

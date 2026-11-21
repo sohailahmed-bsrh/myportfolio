@@ -21,10 +21,10 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=2026.5">
+  <link rel="stylesheet" href="./assets/css/style.css?v=2026.6">
 </head>
 <body>
 
@@ -42,8 +42,8 @@
         <a href="#contact" class="btn-devsil-primary btn-devsil-sm">
           Get in Touch
         </a>
-        <button type="button" class="btn-devsil-secondary btn-devsil-sm" id="btn-header-sidebar" aria-label="Open Sidebar Menu">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button type="button" class="btn-devsil-secondary btn-devsil-sm" id="btn-header-sidebar" aria-label="Open Navigation Menu">
+          <span class="css-hamburger" style="margin:0;"><span style="background:#0F172A;"></span><span style="background:#0F172A;"></span><span style="background:#0F172A;"></span></span>
         </button>
       </div>
     </div>
@@ -75,11 +75,9 @@
             </p>
             <div class="hero-actions">
               <a href="assets/cv/Sohail_Ahmed_CV.pdf?v=20261120" download="Sohail_Ahmed_CV.pdf" class="btn-devsil-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Download CV
               </a>
               <a href="#projects" class="btn-devsil-secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                 Explore Projects
               </a>
               <a href="#contact" class="btn-devsil-outline">
@@ -141,22 +139,22 @@
 
         <div class="about-grid">
           <div class="about-card">
-            <div class="about-card-icon">⚡</div>
+            <span class="card-domain-badge">PILLAR // 01</span>
             <h3>System Architecture & APIs</h3>
             <p>Designing high-throughput, low-latency microservices with FastAPI, Flask, and Docker. Ensuring AI models are exposed through robust, secure REST and WebSocket interfaces with comprehensive logging and error-recovery.</p>
           </div>
           <div class="about-card">
-            <div class="about-card-icon">👁️</div>
+            <span class="card-domain-badge">PILLAR // 02</span>
             <h3>Computer Vision & Detection</h3>
             <p>Developing real-time detection systems with YOLOv8, YOLOv9, and OpenCV. Experienced in building production systems for road hazard detection, smart facial attendance, and high-speed document OCR analysis.</p>
           </div>
           <div class="about-card">
-            <div class="about-card-icon">🧠</div>
+            <span class="card-domain-badge">PILLAR // 03</span>
             <h3>Generative AI & LLM Systems</h3>
             <p>Architecting multi-stage Retrieval-Augmented Generation (RAG) pipelines, semantic vector search with ChromaDB and FAISS, and autonomous agent swarms utilizing LangChain, LlamaIndex, and open-weight models.</p>
           </div>
           <div class="about-card">
-            <div class="about-card-icon">📊</div>
+            <span class="card-domain-badge">PILLAR // 04</span>
             <h3>Data Science & MLOps</h3>
             <p>End-to-end data pipelines from statistical exploratory analysis to automated feature engineering and deployment. Specialized in hyperparameter tuning, model quantization, and CI/CD automation.</p>
           </div>
@@ -176,10 +174,7 @@
         <div class="resume-container">
           <!-- Experience Column -->
           <div class="timeline-column">
-            <h3>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              Work Experience
-            </h3>
+            <h3>Work Experience</h3>
             <div class="timeline-item">
               <div class="timeline-bullet"></div>
               <div class="timeline-card">
@@ -206,10 +201,7 @@
 
           <!-- Education Column -->
           <div class="timeline-column">
-            <h3>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              Education & Degrees
-            </h3>
+            <h3>Education & Degrees</h3>
             <div class="timeline-item">
               <div class="timeline-bullet"></div>
               <div class="timeline-card">
@@ -231,8 +223,7 @@
             <p style="color:var(--text-muted); margin:0;">Download the verified, up-to-date PDF detailing all technical skills, projects, and academic coursework.</p>
           </div>
           <a href="assets/cv/Sohail_Ahmed_CV.pdf?v=20261120" download="Sohail_Ahmed_CV.pdf" class="btn-devsil-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download Official CV (PDF)
+            Download Official CV
           </a>
         </div>
       </div>
@@ -251,10 +242,8 @@
           <!-- 1. Generative AI & LLMs -->
           <div class="skill-deck-card">
             <div class="skill-deck-header">
-              <div class="skill-deck-icon">🤖</div>
-              <div>
-                <h3>Generative AI & LLMs</h3>
-              </div>
+              <span class="card-domain-badge">STACK // 01</span>
+              <h3>Generative AI & LLMs</h3>
             </div>
             <div class="skill-chips">
               <span class="skill-chip">LangChain</span>
@@ -272,10 +261,8 @@
           <!-- 2. Computer Vision -->
           <div class="skill-deck-card">
             <div class="skill-deck-header">
-              <div class="skill-deck-icon">👁️</div>
-              <div>
-                <h3>Computer Vision & Deep Learning</h3>
-              </div>
+              <span class="card-domain-badge">STACK // 02</span>
+              <h3>Computer Vision & Deep Learning</h3>
             </div>
             <div class="skill-chips">
               <span class="skill-chip">YOLOv8 / YOLOv9</span>
@@ -293,10 +280,8 @@
           <!-- 3. Machine Learning & Analytics -->
           <div class="skill-deck-card">
             <div class="skill-deck-header">
-              <div class="skill-deck-icon">📈</div>
-              <div>
-                <h3>Machine Learning & Data Science</h3>
-              </div>
+              <span class="card-domain-badge">STACK // 03</span>
+              <h3>Machine Learning & Data Science</h3>
             </div>
             <div class="skill-chips">
               <span class="skill-chip">Scikit-learn</span>
@@ -314,10 +299,8 @@
           <!-- 4. Backend & Deployment -->
           <div class="skill-deck-card">
             <div class="skill-deck-header">
-              <div class="skill-deck-icon">⚙️</div>
-              <div>
-                <h3>Backend, APIs & Cloud MLOps</h3>
-              </div>
+              <span class="card-domain-badge">STACK // 04</span>
+              <h3>Backend, APIs & Cloud MLOps</h3>
             </div>
             <div class="skill-chips">
               <span class="skill-chip">FastAPI</span>
@@ -334,10 +317,8 @@
           <!-- 5. Languages & Databases -->
           <div class="skill-deck-card">
             <div class="skill-deck-header">
-              <div class="skill-deck-icon">🗄️</div>
-              <div>
-                <h3>Languages & Vector Stores</h3>
-              </div>
+              <span class="card-domain-badge">STACK // 05</span>
+              <h3>Languages & Vector Stores</h3>
             </div>
             <div class="skill-chips">
               <span class="skill-chip">Python (Core)</span>
@@ -821,21 +802,21 @@
           <!-- Contact Info -->
           <div class="contact-info-panel">
             <div class="contact-item-card">
-              <div class="contact-item-icon">✉️</div>
+              <span class="contact-type-badge">EMAIL</span>
               <div class="contact-item-details">
                 <h4>Official Email</h4>
                 <a href="mailto:sohail@devsil.com">sohail@devsil.com</a>
               </div>
             </div>
             <div class="contact-item-card">
-              <div class="contact-item-icon">📍</div>
+              <span class="contact-type-badge">LOCATION</span>
               <div class="contact-item-details">
                 <h4>Location</h4>
                 <p>Mansehra, KPK, Pakistan</p>
               </div>
             </div>
             <div class="contact-item-card">
-              <div class="contact-item-icon">🟢</div>
+              <span class="contact-type-badge">STATUS</span>
               <div class="contact-item-details">
                 <h4>Availability</h4>
                 <p>Open for AI Engineering & Data Science Opportunities</p>
@@ -902,35 +883,22 @@
     </div>
   </footer>
 
-  <!-- FLOATING BOTTOM DOCK NAVIGATION (All Sections + Sidebar Tab) -->
-  <nav class="floating-bottom-dock" aria-label="Quick section navigation">
-    <a href="#hero" class="dock-action-btn active" data-section="hero" aria-label="Go to Home section">
-      <span>🏠</span> Home
-    </a>
-    <a href="#about" class="dock-action-btn" data-section="about" aria-label="Go to About section">
-      <span>👤</span> About
-    </a>
-    <a href="#resume" class="dock-action-btn" data-section="resume" aria-label="Go to Resume section">
-      <span>📄</span> Resume
-    </a>
-    <a href="#skills" class="dock-action-btn" data-section="skills" aria-label="Go to Skills section">
-      <span>⚡</span> Skills
-    </a>
-    <a href="#projects" class="dock-action-btn" data-section="projects" aria-label="Go to Projects section">
-      <span>🚀</span> Projects
-    </a>
-    <a href="#certifications" class="dock-action-btn" data-section="certifications" aria-label="Go to Certifications section">
-      <span>🏆</span> Certs
-    </a>
-    <a href="#contact" class="dock-action-btn" data-section="contact" aria-label="Go to Contact section">
-      <span>✉️</span> Contact
-    </a>
-    <button type="button" class="dock-action-btn sidebar-trigger" id="dock-sidebar-btn" aria-label="Open Sidebar Menu">
-      <span>☰</span> Menu
+  <!-- FLOATING BOTTOM DOCK NAVIGATION (100% Pure CSS - No Emojis) -->
+  <nav class="floating-bottom-dock" aria-label="Section Navigation">
+    <a href="#hero" class="dock-action-btn active" data-section="hero">Home</a>
+    <a href="#about" class="dock-action-btn" data-section="about">About</a>
+    <a href="#resume" class="dock-action-btn" data-section="resume">Resume</a>
+    <a href="#skills" class="dock-action-btn" data-section="skills">Skills</a>
+    <a href="#projects" class="dock-action-btn" data-section="projects">Projects</a>
+    <a href="#certifications" class="dock-action-btn" data-section="certifications">Certs</a>
+    <a href="#contact" class="dock-action-btn" data-section="contact">Contact</a>
+    <button type="button" class="dock-action-btn sidebar-trigger" id="dock-sidebar-btn" aria-label="Open Navigation Sidebar">
+      <span class="css-hamburger"><span></span><span></span><span></span></span>
+      Menu
     </button>
   </nav>
 
-  <!-- SIDEBAR DRAWER OVERLAY & PANEL -->
+  <!-- SIDEBAR DRAWER OVERLAY & PANEL (Pure CSS Numbered Links) -->
   <div class="sidebar-overlay-backdrop" id="sidebar-backdrop"></div>
   <aside class="sidebar-panel-drawer" id="sidebar-drawer" aria-label="Side navigation drawer">
     <div class="drawer-header-row">
@@ -941,17 +909,19 @@
           <span style="font-size: 0.75rem; color: var(--text-muted);">AI Engineer • Devsil</span>
         </div>
       </div>
-      <button type="button" class="drawer-close-btn" id="btn-close-sidebar" aria-label="Close sidebar">✕</button>
+      <button type="button" class="drawer-close-btn" id="btn-close-sidebar" aria-label="Close sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
 
     <ul class="drawer-nav-list">
-      <li><a href="#hero" class="drawer-nav-link active" data-section="hero">🏠 Home / Introduction</a></li>
-      <li><a href="#about" class="drawer-nav-link" data-section="about">👤 About & Engineering Story</a></li>
-      <li><a href="#resume" class="drawer-nav-link" data-section="resume">📄 Resume & Experience</a></li>
-      <li><a href="#skills" class="drawer-nav-link" data-section="skills">⚡ Technical Skills Matrix</a></li>
-      <li><a href="#projects" class="drawer-nav-link" data-section="projects">🚀 Featured Projects (18)</a></li>
-      <li><a href="#certifications" class="drawer-nav-link" data-section="certifications">🏆 Industry Certifications</a></li>
-      <li><a href="#contact" class="drawer-nav-link" data-section="contact">✉️ Contact & Inquiries</a></li>
+      <li><a href="#hero" class="drawer-nav-link active" data-section="hero"><span class="drawer-num">01</span> Home & Overview</a></li>
+      <li><a href="#about" class="drawer-nav-link" data-section="about"><span class="drawer-num">02</span> About & Engineering Story</a></li>
+      <li><a href="#resume" class="drawer-nav-link" data-section="resume"><span class="drawer-num">03</span> Resume & Experience</a></li>
+      <li><a href="#skills" class="drawer-nav-link" data-section="skills"><span class="drawer-num">04</span> Technical Skills Matrix</a></li>
+      <li><a href="#projects" class="drawer-nav-link" data-section="projects"><span class="drawer-num">05</span> Featured Projects (18)</a></li>
+      <li><a href="#certifications" class="drawer-nav-link" data-section="certifications"><span class="drawer-num">06</span> Industry Certifications</a></li>
+      <li><a href="#contact" class="drawer-nav-link" data-section="contact"><span class="drawer-num">07</span> Contact & Inquiries</a></li>
     </ul>
 
     <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
@@ -967,7 +937,9 @@
     <div class="demo-modal" style="background:#FFFFFF; border:1px solid var(--border-light); border-radius:16px; padding:1.5rem; max-width:800px; width:92%; box-shadow:var(--shadow-lg);" onclick="event.stopPropagation()">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid var(--border-light); padding-bottom:0.75rem;">
         <h3 id="lightbox-title" style="margin:0; font-size:1.15rem; color:var(--text-main);">Preview</h3>
-        <button type="button" onclick="closeLightbox(event)" style="border:none; background:#F1F5F9; border-radius:8px; width:32px; height:32px; cursor:pointer; font-weight:700;">✕</button>
+        <button type="button" onclick="closeLightbox(event)" style="border:none; background:#F1F5F9; border-radius:8px; width:32px; height:32px; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </div>
       <div style="max-height:70vh; overflow:auto; text-align:center;">
         <img id="lightbox-img" src="" alt="Preview" style="max-width:100%; height:auto; border-radius:12px; box-shadow:var(--shadow-sm);">
@@ -976,6 +948,6 @@
   </div>
 
   <!-- Client Script -->
-  <script src="./assets/js/main.js?v=2026.5"></script>
+  <script src="./assets/js/main.js?v=2026.6"></script>
 </body>
 </html>

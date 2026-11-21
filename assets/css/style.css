@@ -5943,3 +5943,300 @@ body {
   border-color: var(--primary);
   box-shadow: 0 2px 8px rgba(0, 122, 133, 0.35);
 }
+
+
+
+/* ============================================================
+   DEVSIL TACTILE CSS BUTTON ARCHITECTURE (ems.devsil.com)
+   ============================================================ */
+
+/* Primary Button */
+.btn-devsil-primary,
+.btn-primary {
+  height: 46px;
+  padding: 0 1.75rem;
+  border-radius: 12px;
+  background: #007A85;
+  color: #FFFFFF !important;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 14px rgba(0, 122, 133, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-devsil-primary:hover,
+.btn-primary:hover {
+  background: #006973;
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 22px rgba(0, 122, 133, 0.4);
+  color: #FFFFFF !important;
+}
+
+.btn-devsil-primary:active,
+.btn-primary:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 122, 133, 0.25);
+}
+
+/* Secondary Button */
+.btn-devsil-secondary,
+.btn-secondary {
+  height: 46px;
+  padding: 0 1.75rem;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #0F172A !important;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-devsil-secondary:hover,
+.btn-secondary:hover {
+  background: #F0FDFA;
+  border-color: #007A85;
+  color: #007A85 !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(0, 122, 133, 0.15);
+}
+
+.btn-devsil-secondary:active,
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Outline Button */
+.btn-devsil-outline,
+.btn-outline {
+  height: 46px;
+  padding: 0 1.75rem;
+  border-radius: 12px;
+  background: transparent;
+  color: #007A85 !important;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 2px solid #007A85;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-devsil-outline:hover,
+.btn-outline:hover {
+  background: #007A85;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(0, 122, 133, 0.35);
+  transform: translateY(-1.5px);
+}
+
+.btn-devsil-sm {
+  height: 38px !important;
+  padding: 0 1.15rem !important;
+  font-size: 0.72rem !important;
+}
+
+/* Authentic Social Brand Buttons */
+.social-brands-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.social-brand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 42px;
+  padding: 0 1.25rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-brand-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.social-brand-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.social-brand-btn:active {
+  transform: scale(0.98);
+}
+
+.social-brand-btn.brand-linkedin {
+  background: #0A66C2;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+}
+
+.social-brand-btn.brand-github {
+  background: #24292F;
+  box-shadow: 0 4px 14px rgba(36, 41, 47, 0.3);
+}
+
+.social-brand-btn.brand-kaggle {
+  background: #20BEFF;
+  box-shadow: 0 4px 14px rgba(32, 190, 255, 0.4);
+}
+
+.social-brand-btn.brand-x {
+  background: #000000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Floating Bottom Dock (Tactile Button Cards) */
+.floating-bottom-dock {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0.45rem 0.6rem;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.16), 0 4px 14px rgba(0, 0, 0, 0.06);
+  max-width: 95vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.floating-bottom-dock::-webkit-scrollbar {
+  display: none;
+}
+
+.dock-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.dock-action-btn:hover {
+  color: #007A85;
+  background: #E2E8F0;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+.dock-action-btn.active {
+  background: #007A85 !important;
+  color: #FFFFFF !important;
+  border-color: #007A85 !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 133, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+.dock-action-btn.sidebar-trigger {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25) !important;
+  margin-left: 0.25rem;
+  padding: 0 0.95rem;
+  gap: 0.45rem;
+}
+
+.dock-action-btn.sidebar-trigger:hover {
+  background: #007A85 !important;
+  border-color: #007A85 !important;
+}
+
+/* Sidebar Drawer Links */
+.drawer-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-nav-link:hover {
+  background: #F0FDFA;
+  border-color: #99F6E4;
+  color: #007A85;
+  transform: translateX(3px);
+}
+
+.drawer-nav-link.active {
+  background: #007A85 !important;
+  color: #FFFFFF !important;
+  border-color: #007A85 !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 133, 0.25);
+}
+
+.drawer-nav-link.active .drawer-num {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}

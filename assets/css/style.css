@@ -1029,9 +1029,41 @@ img, svg {
 }
 
 @media (max-width: 768px) {
+  .projects-filter-bar,
+  .filter-tabs-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0.5rem 0.5rem 1rem;
+    margin: 1.5rem 0 2.25rem;
+    gap: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .projects-filter-bar::-webkit-scrollbar,
+  .filter-tabs-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn,
+  .filter-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+  }
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .project-card-body,
+  .card-body-box {
+    padding: 1.25rem;
+  }
+  .project-card-title,
+  .card-title-text {
+    font-size: 1.15rem;
   }
 }
 
@@ -1053,8 +1085,8 @@ img, svg {
 .project-card:hover,
 .portfolio-project-card:hover {
   transform: translateY(-7px);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.3), 0 0 24px rgba(32, 190, 255, 0.16);
+  border-color: #06b6d4;
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.3), 0 0 24px rgba(6, 182, 212, 0.25);
 }
 
 /* Fixed 16:10 Thumbnail Frame */
@@ -1066,6 +1098,12 @@ img, svg {
   overflow: hidden;
   background: #080c14;
   cursor: pointer;
+}
+
+.project-thumb-frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .project-thumb-img,
@@ -1090,17 +1128,18 @@ img, svg {
   top: 14px;
   right: 14px;
   z-index: 2;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.8rem;
   border-radius: var(--radius-full);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: rgba(8, 12, 22, 0.88);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--accent-cyan);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.08em;
+  background: rgba(10, 15, 29, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 12px rgba(56, 189, 248, 0.2);
   pointer-events: none;
 }
 

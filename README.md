@@ -135,7 +135,7 @@ python -m http.server 8080
         <a href="https://www.linkedin.com/in/sohail-ahmed-devsil/"><strong>LinkedIn</strong></a> | 
         <a href="https://www.kaggle.com/sohail2411126"><strong>Kaggle</strong></a> | 
         <a href="https://x.com/ahmed241126"><strong>Twitter/X</strong></a> | 
-        <a href="mailto:se906403@gmail.com"><strong>Email Contact</strong></a>
+        <a href="mailto:sohail.bsrh@gmail.com"><strong>Email Contact</strong></a>
       </p>
     </td>
   </tr>

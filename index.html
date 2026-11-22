@@ -476,958 +476,1581 @@
       </div>
     </section>
 
-    <!-- 5. PROJECTS SECTION -->
+        <!-- 5. PROJECTS SECTION (29 PRODUCTION REPOSITORIES) -->
     <section class="projects-section" id="projects">
       <div class="container">
+        
         <div class="section-header">
-          <div class="section-tag">Showcase</div>
-          <h2 class="section-title">Featured Engineering Projects</h2>
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title">Production AI & Machine Learning Systems</h2>
           <p class="section-subtitle">
-            Explore 29 production-grade repositories with custom Full HD architecture thumbnails, verified codebases, and interactive previews.
+            Explore 29 production-grade repositories spanning Computer Vision, Generative AI, Autonomous Agents, and Enterprise Data Analytics.
           </p>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="project-filters">
-          <button type="button" class="filter-btn active" data-filter="all">All (29)</button>
-          <button type="button" class="filter-btn" data-filter="computer-vision">Computer Vision</button>
-          <button type="button" class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-          <button type="button" class="filter-btn" data-filter="nlp">NLP & Generative AI</button>
-          <button type="button" class="filter-btn" data-filter="automation">Automation & Systems</button>
-          <button type="button" class="filter-btn" data-filter="data-analytics">Data Analytics</button>
+        <!-- Category Filter Tabs -->
+        <div class="projects-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">
+            All Projects <span class="filter-count">29</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="computer-vision">
+            Computer Vision <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="machine-learning">
+            Machine Learning <span class="filter-count">6</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="nlp">
+            NLP & Generative AI <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="automation">
+            Automation & Systems <span class="filter-count">8</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="data-analytics">
+            Data Analytics <span class="filter-count">5</span>
+          </button>
         </div>
 
-        <!-- Projects Grid -->
+        <!-- 29 Verified Projects Grid -->
         <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1: Smart Attendance System -->
+        <article class="project-card portfolio-project-card" data-category="computer-vision">
           
-        <div class="portfolio-project-card" data-category="computer vision full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/smart-attendance-system.jpeg" data-title="Smart Attendance System" data-desc="Automated attendance tracking system using face recognition and computer vision — eliminating manual attendance processes in educational or corporate settings." data-github="https://github.com/sohailahmed-bsrh">
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/smart-attendance-system.jpeg" data-title="Smart Attendance System" data-desc="Automated attendance tracking system using 128-D face embeddings, real-time facial landmark tracking, and anti-spoofing verification — eliminating manual roll-calls in educational and corporate settings." data-github="https://github.com/sohailahmed-bsrh/smart-attendance-system">
             <picture>
               <source srcset="./assets/images/thumbnail/smart-attendance-system.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/smart-attendance-system.jpeg" alt="Smart Attendance System Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/smart-attendance-system.jpeg" alt="Smart Attendance System Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">COMPUTER VISION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">COMPUTER VISION FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Smart Attendance System</h3>
-            <p class="project-description">
-              Automated attendance tracking system using face recognition and computer vision — eliminating manual attendance processes in educational or corporate settings.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">OpenCV</span><span class="project-tag-pill">Face Recognition</span><span class="project-tag-pill">Flask</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Smart Attendance System</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Automated attendance tracking system using 128-D face embeddings, real-time facial landmark tracking, and anti-spoofing verification — eliminating manual roll-calls in educational and corporate settings.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/smart-attendance-system" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/smart-attendance-system#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="computer vision deep learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/road-pothole-detection.jpeg" data-title="Pothole Detection App" data-desc="Real-time pothole detection system using YOLOv8 deep learning and computer vision to identify road hazards — supporting infrastructure maintenance through automated visual inspection." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 2: Pothole Detection App -->
+        <article class="project-card portfolio-project-card" data-category="computer-vision">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/road-pothole-detection.jpeg" data-title="Pothole Detection App" data-desc="Real-time road hazard and pothole detection system utilizing a fine-tuned Ultralytics YOLOv8 deep learning model with bounding-box inference and an interactive Streamlit inspection app." data-github="https://github.com/sohailahmed-bsrh/pothole-detection-app">
             <picture>
               <source srcset="./assets/images/thumbnail/road-pothole-detection.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/road-pothole-detection.jpeg" alt="Pothole Detection App Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/road-pothole-detection.jpeg" alt="Pothole Detection App Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">COMPUTER VISION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">COMPUTER VISION DEEP LEARNING</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Pothole Detection App</h3>
-            <p class="project-description">
-              Real-time pothole detection system using YOLOv8 deep learning and computer vision to identify road hazards — supporting infrastructure maintenance through automated visual inspection.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">YOLOv8</span><span class="project-tag-pill">PyTorch</span><span class="project-tag-pill">OpenCV</span><span class="project-tag-pill">Streamlit</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Pothole Detection App</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Real-time road hazard and pothole detection system utilizing a fine-tuned Ultralytics YOLOv8 deep learning model with bounding-box inference and an interactive Streamlit inspection app.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/pothole-detection-app" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/Pothole_Detection_App/blob/main/pothole_detection_testing.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="computer vision deep learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/asl-recognition.jpeg" data-title="ASL Recognition Project" data-desc="American Sign Language (ASL) hand gesture recognition system using Convolutional Neural Networks — enabling accessibility for the hearing-impaired through AI-powered sign detection." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 3: ASL Recognition Project -->
+        <article class="project-card portfolio-project-card" data-category="computer-vision">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/asl-recognition.jpeg" data-title="ASL Recognition Project" data-desc="American Sign Language (ASL) hand gesture recognition system built with Convolutional Neural Networks (CNN) — enabling accessibility and communication for the hearing-impaired through AI-driven gesture translation." data-github="https://github.com/sohailahmed-bsrh/asl-recognition-project">
             <picture>
               <source srcset="./assets/images/thumbnail/asl-recognition.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/asl-recognition.jpeg" alt="ASL Recognition Project Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/asl-recognition.jpeg" alt="ASL Recognition Project Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">COMPUTER VISION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">COMPUTER VISION DEEP LEARNING</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">ASL Recognition Project</h3>
-            <p class="project-description">
-              American Sign Language (ASL) hand gesture recognition system using Convolutional Neural Networks — enabling accessibility for the hearing-impaired through AI-powered sign detection.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">CNN</span><span class="project-tag-pill">Deep Learning</span><span class="project-tag-pill">TensorFlow</span><span class="project-tag-pill">OpenCV</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">ASL Recognition Project</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              American Sign Language (ASL) hand gesture recognition system built with Convolutional Neural Networks (CNN) — enabling accessibility and communication for the hearing-impaired through AI-driven gesture translation.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/asl-recognition-project" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/asl-recognition-project#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="computer vision full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/document-scanner.jpeg" data-title="Documents Scanner" data-desc="Intelligent document scanning application using OpenCV for edge detection, perspective transformation, and image enhancement — producing clean, digitized document outputs." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 4: Document Scanner Pro -->
+        <article class="project-card portfolio-project-card" data-category="computer-vision">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/document-scanner.jpeg" data-title="Document Scanner Pro" data-desc="Intelligent edge-detection document digitizer utilizing classical OpenCV algorithms: Canny edge filtering, 4-point homography perspective warp, and adaptive Gaussian whitening for on-device scan generation." data-github="https://github.com/sohailahmed-bsrh/document-scanner-project">
             <picture>
               <source srcset="./assets/images/thumbnail/document-scanner.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/document-scanner.jpeg" alt="Documents Scanner Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/document-scanner.jpeg" alt="Document Scanner Pro Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">COMPUTER VISION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">COMPUTER VISION FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Documents Scanner</h3>
-            <p class="project-description">
-              Intelligent document scanning application using OpenCV for edge detection, perspective transformation, and image enhancement — producing clean, digitized document outputs.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">OpenCV</span><span class="project-tag-pill">FastAPI</span><span class="project-tag-pill">Image Processing</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Document Scanner Pro</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Intelligent edge-detection document digitizer utilizing classical OpenCV algorithms: Canny edge filtering, 4-point homography perspective warp, and adaptive Gaussian whitening for on-device scan generation.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/document-scanner-project" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/document-scanner-project#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/sales-data-analysis.jpeg" data-title="Sales Data Analysis" data-desc="In-depth exploratory data analysis and insight generation for retail sales datasets — uncovering trends, seasonality, and revenue drivers to support business decision-making." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 5: Sales Performance Analysis -->
+        <article class="project-card portfolio-project-card" data-category="data-analytics">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/sales-data-analysis.jpeg" data-title="Sales Performance Analysis" data-desc="In-depth exploratory data analysis and insight generation across commercial retail sales datasets — uncovering revenue drivers, seasonal trends, and RFM customer segmentation." data-github="https://github.com/sohailahmed-bsrh/sales-performance-analysis">
             <picture>
               <source srcset="./assets/images/thumbnail/sales-data-analysis.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/sales-data-analysis.jpeg" alt="Sales Data Analysis Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/sales-data-analysis.jpeg" alt="Sales Performance Analysis Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">DATA ANALYTICS</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Sales Data Analysis</h3>
-            <p class="project-description">
-              In-depth exploratory data analysis and insight generation for retail sales datasets — uncovering trends, seasonality, and revenue drivers to support business decision-making.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Pandas</span><span class="project-tag-pill">EDA</span><span class="project-tag-pill">Seaborn</span><span class="project-tag-pill">Data Analytics</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Sales Performance Analysis</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              In-depth exploratory data analysis and insight generation across commercial retail sales datasets — uncovering revenue drivers, seasonal trends, and RFM customer segmentation.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/sales-performance-analysis" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/Projects/Project%201/sales_dataset.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="machine learning data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/customer-churn-analysis.jpeg" data-title="Customer Churn Analysis" data-desc="Predicting customer retention and identifying key churn risk factors using robust machine learning classification models — helping businesses proactively retain at-risk customers." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 6: Customer Churn Prediction -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/customer-churn-analysis.jpeg" data-title="Customer Churn Prediction" data-desc="Predictive classification model forecasting subscriber churn risk with ROC-AUC optimization, identifying high-risk customer retention factors to enable proactive retention campaigns." data-github="https://github.com/sohailahmed-bsrh/customer-churn-prediction">
             <picture>
               <source srcset="./assets/images/thumbnail/customer-churn-analysis.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/customer-churn-analysis.jpeg" alt="Customer Churn Analysis Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/customer-churn-analysis.jpeg" alt="Customer Churn Prediction Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MACHINE LEARNING DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Customer Churn Analysis</h3>
-            <p class="project-description">
-              Predicting customer retention and identifying key churn risk factors using robust machine learning classification models — helping businesses proactively retain at-risk customers.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Scikit-Learn</span><span class="project-tag-pill">Machine Learning</span><span class="project-tag-pill">Classification</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Customer Churn Prediction</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Predictive classification model forecasting subscriber churn risk with ROC-AUC optimization, identifying high-risk customer retention factors to enable proactive retention campaigns.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/customer-churn-prediction" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/Mentorship-Program-Devsil/blob/main/costumer_chorn_analysis%20(1).ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="data analysis machine learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/employee-attrition.jpeg" data-title="Employee Attrition Analysis" data-desc="HR analytics project identifying the root drivers of employee turnover — analyzing satisfaction scores, tenure, and department metrics to optimize talent retention strategies." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 7: Employee Attrition Analysis -->
+        <article class="project-card portfolio-project-card" data-category="data-analytics">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/employee-attrition.jpeg" data-title="Employee Attrition Analysis" data-desc="Workforce analytics pipeline analyzing organizational turnover patterns, compensation metrics, and department satisfaction scores to identify key drivers of workforce attrition." data-github="https://github.com/sohailahmed-bsrh/employee-attrition-analysis">
             <picture>
               <source srcset="./assets/images/thumbnail/employee-attrition.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/employee-attrition.jpeg" alt="Employee Attrition Analysis Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/employee-attrition.jpeg" alt="Employee Attrition Analysis Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">DATA ANALYTICS</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">DATA ANALYSIS MACHINE LEARNING</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Employee Attrition Analysis</h3>
-            <p class="project-description">
-              HR analytics project identifying the root drivers of employee turnover — analyzing satisfaction scores, tenure, and department metrics to optimize talent retention strategies.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Data Analytics</span><span class="project-tag-pill">EDA</span><span class="project-tag-pill">HR Tech</span><span class="project-tag-pill">Machine Learning</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Employee Attrition Analysis</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Workforce analytics pipeline analyzing organizational turnover patterns, compensation metrics, and department satisfaction scores to identify key drivers of workforce attrition.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/employee-attrition-analysis" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/Employee-Attrition-Analysis/blob/main/Employee%20Attrition%20Analysis.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/hospital-emergency-room.jpeg" data-title="Hospital Emergency Room Analysis" data-desc="Operational data analysis for emergency room patient flows — evaluating wait times, bed utilization, and staffing bottlenecks to support hospital management efficiency." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 8: Emergency Room Analysis -->
+        <article class="project-card portfolio-project-card" data-category="data-analytics">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/hospital-emergency-room.jpeg" data-title="Emergency Room Analysis" data-desc="Hospital emergency department operations analytics examining patient flow, triage wait times, bed occupancy rates, and peak hour admissions to optimize clinical staffing." data-github="https://github.com/sohailahmed-bsrh/emergency-room-analysis">
             <picture>
               <source srcset="./assets/images/thumbnail/hospital-emergency-room.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/hospital-emergency-room.jpeg" alt="Hospital Emergency Room Analysis Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/hospital-emergency-room.jpeg" alt="Emergency Room Analysis Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">DATA ANALYTICS</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Hospital Emergency Room Analysis</h3>
-            <p class="project-description">
-              Operational data analysis for emergency room patient flows — evaluating wait times, bed utilization, and staffing bottlenecks to support hospital management efficiency.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Data Analytics</span><span class="project-tag-pill">Healthcare</span><span class="project-tag-pill">Visualization</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Emergency Room Analysis</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Hospital emergency department operations analytics examining patient flow, triage wait times, bed occupancy rates, and peak hour admissions to optimize clinical staffing.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/emergency-room-analysis" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/emergency-_room_analysis/blob/main/ER.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="machine learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/heart-disease-prediction.jpeg" data-title="Heart Disease Prediction" data-desc="Cardiovascular risk prediction system built with supervised machine learning algorithms — trained on clinical diagnostic features to assist medical decision support." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 9: Heart Disease Prediction -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/heart-disease-prediction.jpeg" data-title="Heart Disease Prediction" data-desc="Clinical diagnostic classification model predicting cardiovascular disease probability from patient biomarker metrics (cholesterol, resting ECG, blood pressure) to support preventative clinical screening." data-github="https://github.com/sohailahmed-bsrh/heart-disease-prediction">
             <picture>
               <source srcset="./assets/images/thumbnail/heart-disease-prediction.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/heart-disease-prediction.jpeg" alt="Heart Disease Prediction Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/heart-disease-prediction.jpeg" alt="Heart Disease Prediction Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
-            <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
-            </div>
+
+            <!-- Domain Category Badge -->
             <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
+            <div class="project-thumb-overlay">
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
+            </div>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Heart Disease Prediction</h3>
-            <p class="project-description">
-              Cardiovascular risk prediction system built with supervised machine learning algorithms — trained on clinical diagnostic features to assist medical decision support.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Scikit-Learn</span><span class="project-tag-pill">Machine Learning</span><span class="project-tag-pill">Healthcare AI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Heart Disease Prediction</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Clinical diagnostic classification model predicting cardiovascular disease probability from patient biomarker metrics (cholesterol, resting ECG, blood pressure) to support preventative clinical screening.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/heart-disease-prediction" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/00_Project/blob/main/01_Heart_disease_prediction/heart_disease_prediction.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="machine learning data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-media-engagement.jpeg" data-title="Social Media Engagement Prediction" data-desc="Predictive modeling pipeline estimating user interaction rates across social platforms — analyzing timing, content features, and audience demographics to optimize publishing strategy." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 10: Social Media Engagement Prediction -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-media-engagement.jpeg" data-title="Social Media Engagement Prediction" data-desc="Predictive regression pipeline modeling content virality and interaction metrics across multi-channel social media posts, analyzing publishing time, caption length, and format factors." data-github="https://github.com/sohailahmed-bsrh/social-media-engagement-prediction">
             <picture>
               <source srcset="./assets/images/thumbnail/social-media-engagement.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/social-media-engagement.jpeg" alt="Social Media Engagement Prediction Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/social-media-engagement.jpeg" alt="Social Media Engagement Prediction Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MACHINE LEARNING DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Social Media Engagement Prediction</h3>
-            <p class="project-description">
-              Predictive modeling pipeline estimating user interaction rates across social platforms — analyzing timing, content features, and audience demographics to optimize publishing strategy.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Scikit-Learn</span><span class="project-tag-pill">Regression</span><span class="project-tag-pill">Feature Engineering</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Social Media Engagement Prediction</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Predictive regression pipeline modeling content virality and interaction metrics across multi-channel social media posts, analyzing publishing time, caption length, and format factors.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/social-media-engagement-prediction" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/project_6/blob/main/dataset/social_media_engagement_prediction.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="machine learning data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/healthcare-cost-prediction.png" data-title="Healthcare Cost Prediction & Segmentation" data-desc="Insurance claim forecasting and patient risk profiling using regression and clustering algorithms — helping health insurance providers accurately assess premium rates and risk pools." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 11: Medical Insurance Cost Prediction -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/healthcare-cost-prediction.png" data-title="Medical Insurance Cost Prediction" data-desc="Actuarial regression and risk segmentation modeling individual healthcare expenditures based on demographic and lifestyle indicators (BMI, smoking status, age) for insurance underwriting." data-github="https://github.com/sohailahmed-bsrh/medical-insurance-cost-prediction">
             <picture>
               <source srcset="./assets/images/thumbnail/healthcare-cost-prediction.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/healthcare-cost-prediction.png" alt="Healthcare Cost Prediction & Segmentation Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/healthcare-cost-prediction.png" alt="Medical Insurance Cost Prediction Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MACHINE LEARNING DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Healthcare Cost Prediction & Segmentation</h3>
-            <p class="project-description">
-              Insurance claim forecasting and patient risk profiling using regression and clustering algorithms — helping health insurance providers accurately assess premium rates and risk pools.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Machine Learning</span><span class="project-tag-pill">Regression</span><span class="project-tag-pill">Healthcare Analytics</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Medical Insurance Cost Prediction</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Actuarial regression and risk segmentation modeling individual healthcare expenditures based on demographic and lifestyle indicators (BMI, smoking status, age) for insurance underwriting.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/medical-insurance-cost-prediction" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/project_08/blob/main/dataset/insurance.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="machine learning deep learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/unsupervised-ml-deep-learning.jpeg" data-title="Unsupervised ML & Deep Learning" data-desc="Exploration of unsupervised representation learning techniques — combining clustering algorithms, PCA dimensionality reduction, and autoencoder architectures for unlabeled data analysis." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 12: Unsupervised Deep Learning Pipeline -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/unsupervised-ml-deep-learning.jpeg" data-title="Unsupervised Deep Learning Pipeline" data-desc="Clustering and latent representation learning framework combining K-Means, DBSCAN, Principal Component Analysis (PCA), and deep autoencoders for complex unlabeled dataset discovery." data-github="https://github.com/sohailahmed-bsrh/unsupervised-deep-learning-pipeline">
             <picture>
               <source srcset="./assets/images/thumbnail/unsupervised-ml-deep-learning.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/unsupervised-ml-deep-learning.jpeg" alt="Unsupervised ML & Deep Learning Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/unsupervised-ml-deep-learning.jpeg" alt="Unsupervised Deep Learning Pipeline Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MACHINE LEARNING DEEP LEARNING</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Unsupervised ML & Deep Learning</h3>
-            <p class="project-description">
-              Exploration of unsupervised representation learning techniques — combining clustering algorithms, PCA dimensionality reduction, and autoencoder architectures for unlabeled data analysis.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Unsupervised ML</span><span class="project-tag-pill">Deep Learning</span><span class="project-tag-pill">PCA</span><span class="project-tag-pill">Clustering</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Unsupervised Deep Learning Pipeline</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Clustering and latent representation learning framework combining K-Means, DBSCAN, Principal Component Analysis (PCA), and deep autoencoders for complex unlabeled dataset discovery.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/unsupervised-deep-learning-pipeline" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/project-9-ML-DL/blob/main/Unsupervised_ML_%26_Deep_Learning.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="deep learning computer vision">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/cnn-vision-lstm-nlp.jpeg" data-title="Deep Learning: CNN (Vision) & LSTM (NLP)" data-desc="Advanced deep learning project implementing CNNs for image classification and LSTMs for natural language processing — demonstrating expertise in both Computer Vision and NLP architectures." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 13: Hybrid CNN-LSTM Architecture -->
+        <article class="project-card portfolio-project-card" data-category="computer-vision">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/cnn-vision-lstm-nlp.jpeg" data-title="Hybrid CNN-LSTM Architecture" data-desc="Dual-stream deep neural network architecture combining spatial Convolutional Neural Networks (CNN) for visual feature extraction with Long Short-Term Memory (LSTM) recurrent networks for sequential modeling." data-github="https://github.com/sohailahmed-bsrh/deep-learning-cnn-lstm">
             <picture>
               <source srcset="./assets/images/thumbnail/cnn-vision-lstm-nlp.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/cnn-vision-lstm-nlp.jpeg" alt="Deep Learning: CNN (Vision) & LSTM (NLP) Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/cnn-vision-lstm-nlp.jpeg" alt="Hybrid CNN-LSTM Architecture Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">COMPUTER VISION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">DEEP LEARNING COMPUTER VISION</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Deep Learning: CNN (Vision) & LSTM (NLP)</h3>
-            <p class="project-description">
-              Advanced deep learning project implementing CNNs for image classification and LSTMs for natural language processing — demonstrating expertise in both Computer Vision and NLP architectures.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">PyTorch</span><span class="project-tag-pill">CNN</span><span class="project-tag-pill">LSTM</span><span class="project-tag-pill">Computer Vision</span><span class="project-tag-pill">NLP</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Hybrid CNN-LSTM Architecture</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Dual-stream deep neural network architecture combining spatial Convolutional Neural Networks (CNN) for visual feature extraction with Long Short-Term Memory (LSTM) recurrent networks for sequential modeling.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/deep-learning-cnn-lstm" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/CNN-project-_10/blob/main/Deep_Learning_Project_using_CNN_(Computer_Vision)_and_LSTM_(NLP).ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="deep learning machine learning">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/time-series-forecasting.jpeg" data-title="Time Series Forecasting & Transfer Learning" data-desc="Applying transfer learning techniques to sequential time-series data — achieving accurate future predictions for temporal patterns in financial and operational datasets." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 14: Time Series Forecasting Pipeline -->
+        <article class="project-card portfolio-project-card" data-category="machine-learning">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/time-series-forecasting.jpeg" data-title="Time Series Forecasting Pipeline" data-desc="Sequential time series modeling pipeline utilizing seasonal ARIMA, exponential smoothing, and deep neural transfer learning architectures for financial and operational forecasting." data-github="https://github.com/sohailahmed-bsrh/time-series-forecasting-pipeline">
             <picture>
               <source srcset="./assets/images/thumbnail/time-series-forecasting.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/time-series-forecasting.jpeg" alt="Time Series Forecasting & Transfer Learning Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/time-series-forecasting.jpeg" alt="Time Series Forecasting Pipeline Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">MACHINE LEARNING</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">DEEP LEARNING MACHINE LEARNING</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Time Series Forecasting & Transfer Learning</h3>
-            <p class="project-description">
-              Applying transfer learning techniques to sequential time-series data — achieving accurate future predictions for temporal patterns in financial and operational datasets.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Time Series</span><span class="project-tag-pill">ARIMA</span><span class="project-tag-pill">Forecasting</span><span class="project-tag-pill">Deep Learning</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Time Series Forecasting Pipeline</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Sequential time series modeling pipeline utilizing seasonal ARIMA, exponential smoothing, and deep neural transfer learning architectures for financial and operational forecasting.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/time-series-forecasting-pipeline" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/project_11/blob/main/time_series_forcasting.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/full-stack-ai-streamlit.jpeg" data-title="Full Stack AI Application" data-desc="End-to-end AI application development demonstrating full-stack integration: ML models served through FastAPI and Flask backends, with an interactive Streamlit frontend — a complete production-ready AI system." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 15: Full-Stack AI Serving Framework -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/full-stack-ai-streamlit.jpeg" data-title="Full-Stack AI Serving Framework" data-desc="Production-ready machine learning microservice architecture serving PyTorch and Scikit-Learn models via high-concurrency FastAPI/Flask REST APIs paired with an interactive Streamlit UI." data-github="https://github.com/sohailahmed-bsrh/fullstack-ai-serving-framework">
             <picture>
               <source srcset="./assets/images/thumbnail/full-stack-ai-streamlit.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/full-stack-ai-streamlit.jpeg" alt="Full Stack AI Application Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/full-stack-ai-streamlit.jpeg" alt="Full-Stack AI Serving Framework Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Full Stack AI Application</h3>
-            <p class="project-description">
-              End-to-end AI application development demonstrating full-stack integration: ML models served through FastAPI and Flask backends, with an interactive Streamlit frontend — a complete production-ready AI system.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Streamlit</span><span class="project-tag-pill">FastAPI</span><span class="project-tag-pill">Flask</span><span class="project-tag-pill">Docker</span><span class="project-tag-pill">Python</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Full-Stack AI Serving Framework</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Production-ready machine learning microservice architecture serving PyTorch and Scikit-Learn models via high-concurrency FastAPI/Flask REST APIs paired with an interactive Streamlit UI.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/fullstack-ai-serving-framework" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://nbviewer.org/github/sohail-ahmed-26/project_12/blob/main/FULL_STACK_AI_APPLICATION_DEVELOPMENT_USING_STREAMLIT%2C_FLASK_AND_FASTAPI.ipynb" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Notebook
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="generative ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/ai-ads-maker.png" data-title="AI Ads Maker" data-desc="AI-powered application designed to automate and generate creative marketing advertisements, enhancing content creation speed and efficiency." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 16: AI Ads Maker -->
+        <article class="project-card portfolio-project-card" data-category="nlp">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/ai-ads-maker.png" data-title="AI Ads Maker" data-desc="Generative marketing automation engine crafting high-converting advertising copy, structured headlines, and multi-format layouts (1:1, 9:16, 16:9) powered by LLM prompt orchestration." data-github="https://github.com/sohailahmed-bsrh/ai-ads-maker">
             <picture>
               <source srcset="./assets/images/thumbnail/ai-ads-maker.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/ai-ads-maker.png" alt="AI Ads Maker Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/ai-ads-maker.png" alt="AI Ads Maker Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">NLP</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">GENERATIVE AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">AI Ads Maker</h3>
-            <p class="project-description">
-              AI-powered application designed to automate and generate creative marketing advertisements, enhancing content creation speed and efficiency.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Generative AI</span><span class="project-tag-pill">LLMs</span><span class="project-tag-pill">FastAPI</span><span class="project-tag-pill">Python</span><span class="project-tag-pill">Prompt Engineering</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">AI Ads Maker</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Generative marketing automation engine crafting high-converting advertising copy, structured headlines, and multi-format layouts (1:1, 9:16, 16:9) powered by LLM prompt orchestration.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/ai-ads-maker" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/ai-ads-maker#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="generative ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/job-analyzer.png" data-title="Job Analyzer" data-desc="An intelligent Generative AI tool to analyze job descriptions and match them with resumes, providing similarity scores and keyword extraction." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 17: Job Analyzer Pro -->
+        <article class="project-card portfolio-project-card" data-category="nlp">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/job-analyzer.png" data-title="Job Analyzer Pro" data-desc="Intelligent recruitment and resume intelligence tool utilizing NLP semantic matching to score candidate resumes against job descriptions, identifying keyword gaps and ATS fit." data-github="https://github.com/sohailahmed-bsrh/job-analyzer">
             <picture>
               <source srcset="./assets/images/thumbnail/job-analyzer.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/job-analyzer.png" alt="Job Analyzer Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/job-analyzer.png" alt="Job Analyzer Pro Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">NLP</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">GENERATIVE AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Job Analyzer</h3>
-            <p class="project-description">
-              An intelligent Generative AI tool to analyze job descriptions and match them with resumes, providing similarity scores and keyword extraction.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">NLP</span><span class="project-tag-pill">Resume Parsing</span><span class="project-tag-pill">Generative AI</span><span class="project-tag-pill">Python</span><span class="project-tag-pill">FastAPI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Job Analyzer Pro</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Intelligent recruitment and resume intelligence tool utilizing NLP semantic matching to score candidate resumes against job descriptions, identifying keyword gaps and ATS fit.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/job-analyzer" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/job-analyzer#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="generative ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-media-content-writer.png" data-title="Social Media Content Rewriter" data-desc="A smart tool leveraging advanced language models to repurpose, optimize, and rewrite text for various social media platforms to maximize engagement." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 18: Social Media Content Rewriter -->
+        <article class="project-card portfolio-project-card" data-category="nlp">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-media-content-writer.png" data-title="Social Media Content Rewriter" data-desc="Multi-channel content adaptation system leveraging LLMs to transform long-form articles into optimized, engagement-focused posts tailored for LinkedIn, Twitter, and Instagram." data-github="https://github.com/sohailahmed-bsrh/social-media-content-rewriter">
             <picture>
               <source srcset="./assets/images/thumbnail/social-media-content-writer.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/social-media-content-writer.png" alt="Social Media Content Rewriter Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/social-media-content-writer.png" alt="Social Media Content Rewriter Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">NLP</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">GENERATIVE AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Social Media Content Rewriter</h3>
-            <p class="project-description">
-              A smart tool leveraging advanced language models to repurpose, optimize, and rewrite text for various social media platforms to maximize engagement.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Generative AI</span><span class="project-tag-pill">LLMs</span><span class="project-tag-pill">NLP</span><span class="project-tag-pill">Python</span><span class="project-tag-pill">FastAPI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Social Media Content Rewriter</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Multi-channel content adaptation system leveraging LLMs to transform long-form articles into optimized, engagement-focused posts tailored for LinkedIn, Twitter, and Instagram.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/social-media-content-rewriter" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/social-media-content-rewriter#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="generative ai full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/auto-video-generator.jpeg" data-title="Auto Video Generator" data-desc="Multi-track video synthesis and prompt sequencing engine powered by Cloudflare Workers AI and FFmpeg for automated 1080p 60fps video generation." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 19: Auto Video Generator -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/auto-video-generator.jpeg" data-title="Auto Video Generator" data-desc="Programmatic video production pipeline integrating automated text script synthesis, OpenAI Whisper speech-to-text alignment, voiceover generation, and FFmpeg composite rendering." data-github="https://github.com/sohailahmed-bsrh/auto-video-generator">
             <picture>
               <source srcset="./assets/images/thumbnail/auto-video-generator.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/auto-video-generator.jpeg" alt="Auto Video Generator Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/auto-video-generator.jpeg" alt="Auto Video Generator Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">GENERATIVE AI FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Auto Video Generator</h3>
-            <p class="project-description">
-              Multi-track video synthesis and prompt sequencing engine powered by Cloudflare Workers AI and FFmpeg for automated 1080p 60fps video generation.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">FFmpeg</span><span class="project-tag-pill">Whisper AI</span><span class="project-tag-pill">Automation</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Auto Video Generator</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Programmatic video production pipeline integrating automated text script synthesis, OpenAI Whisper speech-to-text alignment, voiceover generation, and FFmpeg composite rendering.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/auto-video-generator" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/auto-video-generator#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="multi-agent full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/slidewright.jpeg" data-title="Slidewright Presentation Designer" data-desc="Autonomous multi-agent presentation system with Designer Agent, Critic Agent, and OpenRouter LLM evaluating 48 layout rules." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 20: Slidewright Presentation Designer -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/slidewright.jpeg" data-title="Slidewright Presentation Designer" data-desc="Autonomous multi-agent presentation architecture featuring decoupled Designer and Critic agents that validate slide typography, layout schemas, and content hierarchy iteratively." data-github="https://github.com/sohailahmed-bsrh/slidewright">
             <picture>
               <source srcset="./assets/images/thumbnail/slidewright.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/slidewright.jpeg" alt="Slidewright Presentation Designer Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/slidewright.jpeg" alt="Slidewright Presentation Designer Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MULTI AGENT FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Slidewright Presentation Designer</h3>
-            <p class="project-description">
-              Autonomous multi-agent presentation system with Designer Agent, Critic Agent, and OpenRouter LLM evaluating 48 layout rules.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Multi-Agent</span><span class="project-tag-pill">LLMs</span><span class="project-tag-pill">TypeScript</span><span class="project-tag-pill">Prompt Engineering</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Slidewright Presentation Designer</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Autonomous multi-agent presentation architecture featuring decoupled Designer and Critic agents that validate slide typography, layout schemas, and content hierarchy iteratively.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/slidewright" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/slidewright#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="e-commerce full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/shopify-listing.jpeg" data-title="Shopify Listing Suite" data-desc="Automated product staging, Amazon ASIN scraper, AWS S3 media pipeline, and Shopify Admin GraphQL publishing engine." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 21: Shopify Listing Automation -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/shopify-listing.jpeg" data-title="Shopify Listing Automation" data-desc="Automated e-commerce catalog ingestion pipeline with image resizing, SEO metadata extraction, and batch product synchronization via Shopify Admin REST & GraphQL APIs." data-github="https://github.com/sohailahmed-bsrh/shopify-listing">
             <picture>
               <source srcset="./assets/images/thumbnail/shopify-listing.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/shopify-listing.jpeg" alt="Shopify Listing Suite Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/shopify-listing.jpeg" alt="Shopify Listing Automation Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">E COMMERCE FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Shopify Listing Suite</h3>
-            <p class="project-description">
-              Automated product staging, Amazon ASIN scraper, AWS S3 media pipeline, and Shopify Admin GraphQL publishing engine.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Shopify API</span><span class="project-tag-pill">Python</span><span class="project-tag-pill">E-Commerce</span><span class="project-tag-pill">Automation</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Shopify Listing Automation</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Automated e-commerce catalog ingestion pipeline with image resizing, SEO metadata extraction, and batch product synchronization via Shopify Admin REST & GraphQL APIs.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/shopify-listing" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/shopify-listing#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="conversational ai full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/ecomerce-automation.jpeg" data-title="E-Commerce WhatsApp Automation" data-desc="24/7 autonomous WhatsApp Cloud API sales and order tracking assistant with real-time Shopify fulfillment webhooks." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 22: E-Commerce WhatsApp Automation -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/ecomerce-automation.jpeg" data-title="E-Commerce WhatsApp Automation" data-desc="24/7 conversational sales assistant on WhatsApp Cloud API handling real-time product recommendations, order tracking, and inventory webhook notifications." data-github="https://github.com/sohailahmed-bsrh/ecomerce-automation">
             <picture>
               <source srcset="./assets/images/thumbnail/ecomerce-automation.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/ecomerce-automation.jpeg" alt="E-Commerce WhatsApp Automation Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/ecomerce-automation.jpeg" alt="E-Commerce WhatsApp Automation Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">CONVERSATIONAL AI FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">E-Commerce WhatsApp Automation</h3>
-            <p class="project-description">
-              24/7 autonomous WhatsApp Cloud API sales and order tracking assistant with real-time Shopify fulfillment webhooks.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">WhatsApp API</span><span class="project-tag-pill">FastAPI</span><span class="project-tag-pill">Webhooks</span><span class="project-tag-pill">Chatbot</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">E-Commerce WhatsApp Automation</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              24/7 conversational sales assistant on WhatsApp Cloud API handling real-time product recommendations, order tracking, and inventory webhook notifications.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/ecomerce-automation" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/ecomerce-automation#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="legal rag full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/pakistan-law-helper.jpeg" data-title="Pakistan Law Helper" data-desc="Statutory legal research assistant with grounded RAG retrieval across Federal and Provincial penal codes (PPC, CrPC, CPC) with section citations." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 23: Pakistan Law Helper -->
+        <article class="project-card portfolio-project-card" data-category="nlp">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/pakistan-law-helper.jpeg" data-title="Pakistan Law Helper" data-desc="Specialized legal research assistant built on Retrieval-Augmented Generation (RAG) and dense vector embeddings across Pakistan Penal Code and civil procedure statutes." data-github="https://github.com/sohailahmed-bsrh/pakistan-law-helper">
             <picture>
               <source srcset="./assets/images/thumbnail/pakistan-law-helper.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/pakistan-law-helper.jpeg" alt="Pakistan Law Helper Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/pakistan-law-helper.jpeg" alt="Pakistan Law Helper Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">NLP</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">LEGAL RAG FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Pakistan Law Helper</h3>
-            <p class="project-description">
-              Statutory legal research assistant with grounded RAG retrieval across Federal and Provincial penal codes (PPC, CrPC, CPC) with section citations.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">RAG</span><span class="project-tag-pill">Vector Search</span><span class="project-tag-pill">LangChain</span><span class="project-tag-pill">FastAPI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Pakistan Law Helper</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Specialized legal research assistant built on Retrieval-Augmented Generation (RAG) and dense vector embeddings across Pakistan Penal Code and civil procedure statutes.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/pakistan-law-helper" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/pakistan-law-helper#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="audio-visual ai full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/video-editing-automation.jpeg" data-title="Video Editing Automation" data-desc="Automated video post-production engine with silence extraction, OpenAI Whisper word-level timestamps, and PySceneDetect jump cuts." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 24: Video Editing Automation -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/video-editing-automation.jpeg" data-title="Video Editing Automation" data-desc="Automated post-production engine executing decibel-based silence detection, jump-cut generation, dynamic caption burning, and multi-resolution rendering." data-github="https://github.com/sohailahmed-bsrh/video-editing-automation">
             <picture>
               <source srcset="./assets/images/thumbnail/video-editing-automation.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/video-editing-automation.jpeg" alt="Video Editing Automation Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/video-editing-automation.jpeg" alt="Video Editing Automation Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">AUDIO VISUAL AI FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Video Editing Automation</h3>
-            <p class="project-description">
-              Automated video post-production engine with silence extraction, OpenAI Whisper word-level timestamps, and PySceneDetect jump cuts.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">FFmpeg</span><span class="project-tag-pill">Python</span><span class="project-tag-pill">Audio Processing</span><span class="project-tag-pill">Automation</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Video Editing Automation</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Automated post-production engine executing decibel-based silence detection, jump-cut generation, dynamic caption burning, and multi-resolution rendering.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/video-editing-automation" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/video-editing-automation#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="clinical ehr rag full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/medi-scribe-sage.jpeg" data-title="Medi-Scribe-Sage" data-desc="Clinical audio transcription and ambient healthcare EHR platform generating structured SOAP notes backed by grounded medical RAG retrieval." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 25: Medi-Scribe Sage -->
+        <article class="project-card portfolio-project-card" data-category="nlp">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/medi-scribe-sage.jpeg" data-title="Medi-Scribe Sage" data-desc="Clinical audio transcription and documentation assistant converting doctor-patient audio dialogues into standardized Electronic Health Record (EHR) SOAP clinical summaries." data-github="https://github.com/sohailahmed-bsrh/medi-scribe-sage">
             <picture>
               <source srcset="./assets/images/thumbnail/medi-scribe-sage.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/medi-scribe-sage.jpeg" alt="Medi-Scribe-Sage Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/medi-scribe-sage.jpeg" alt="Medi-Scribe Sage Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">NLP</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">CLINICAL EHR RAG FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Medi-Scribe-Sage</h3>
-            <p class="project-description">
-              Clinical audio transcription and ambient healthcare EHR platform generating structured SOAP notes backed by grounded medical RAG retrieval.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Clinical NLP</span><span class="project-tag-pill">Whisper</span><span class="project-tag-pill">FastAPI</span><span class="project-tag-pill">Healthcare AI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Medi-Scribe Sage</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Clinical audio transcription and documentation assistant converting doctor-patient audio dialogues into standardized Electronic Health Record (EHR) SOAP clinical summaries.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/medi-scribe-sage" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/medi-scribe-sage#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="multi-agent full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-post-studio.jpeg" data-title="Social Post Studio" data-desc="Autonomous multi-agent social publisher coordinating Copywriter Agent, Gemini Imagen 3 visual designer, and Meta Graph API." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 26: Social Post Studio -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/social-post-studio.jpeg" data-title="Social Post Studio" data-desc="Multi-agent social publishing system coordinating an AI Copywriter, visual asset generator, and automated scheduler across LinkedIn and Twitter APIs." data-github="https://github.com/sohailahmed-bsrh/social-post-studio">
             <picture>
               <source srcset="./assets/images/thumbnail/social-post-studio.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/social-post-studio.jpeg" alt="Social Post Studio Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/social-post-studio.jpeg" alt="Social Post Studio Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">MULTI AGENT FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Social Post Studio</h3>
-            <p class="project-description">
-              Autonomous multi-agent social publisher coordinating Copywriter Agent, Gemini Imagen 3 visual designer, and Meta Graph API.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Node.js</span><span class="project-tag-pill">Express</span><span class="project-tag-pill">Social APIs</span><span class="project-tag-pill">Automation</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Social Post Studio</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Multi-agent social publishing system coordinating an AI Copywriter, visual asset generator, and automated scheduler across LinkedIn and Twitter APIs.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/social-post-studio" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/social-post-studio#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="omnichannel crm full stack ai">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/connect-all-together.jpeg" data-title="Connect All Together" data-desc="Multi-tenant omnichannel CRM aggregating WhatsApp, SMS, and email interactions with GDPR/TCPA consent tracking and Drizzle MySQL core." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 27: Connect All Together CRM -->
+        <article class="project-card portfolio-project-card" data-category="automation">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/connect-all-together.jpeg" data-title="Connect All Together CRM" data-desc="Full-stack omnichannel communications CRM integrating WhatsApp, SMS, and email inbox management with Drizzle ORM migrations and Bun high-speed runtime." data-github="https://github.com/sohailahmed-bsrh/connect-all-together">
             <picture>
               <source srcset="./assets/images/thumbnail/connect-all-together.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/connect-all-together.jpeg" alt="Connect All Together Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/connect-all-together.jpeg" alt="Connect All Together CRM Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">AUTOMATION</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">OMNICHANNEL CRM FULL STACK AI</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Connect All Together</h3>
-            <p class="project-description">
-              Multi-tenant omnichannel CRM aggregating WhatsApp, SMS, and email interactions with GDPR/TCPA consent tracking and Drizzle MySQL core.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Bun</span><span class="project-tag-pill">TypeScript</span><span class="project-tag-pill">Drizzle ORM</span><span class="project-tag-pill">PostgreSQL</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Connect All Together CRM</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Full-stack omnichannel communications CRM integrating WhatsApp, SMS, and email inbox management with Drizzle ORM migrations and Bun high-speed runtime.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/connect-all-together" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/connect-all-together#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="commercial analytics data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/sales-datasets-analysis.jpeg" data-title="Multi-Channel Sales Dataset Analytics" data-desc="Commercial retail point-of-sale intelligence, market basket affinity analysis, itemset lift, and pricing elasticity modeling." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 28: Sales Datasets Analysis -->
+        <article class="project-card portfolio-project-card" data-category="data-analytics">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/sales-datasets-analysis.jpeg" data-title="Sales Datasets Analysis" data-desc="Multi-channel retail intelligence suite evaluating market basket affinity, product cross-sell probability, price elasticity, and transaction cohort performance." data-github="https://github.com/sohailahmed-bsrh/sales-datasets-analysis">
             <picture>
               <source srcset="./assets/images/thumbnail/sales-datasets-analysis.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/sales-datasets-analysis.jpeg" alt="Multi-Channel Sales Dataset Analytics Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/sales-datasets-analysis.jpeg" alt="Sales Datasets Analysis Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">DATA ANALYTICS</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">COMMERCIAL ANALYTICS DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Multi-Channel Sales Dataset Analytics</h3>
-            <p class="project-description">
-              Commercial retail point-of-sale intelligence, market basket affinity analysis, itemset lift, and pricing elasticity modeling.
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Pandas</span><span class="project-tag-pill">Data Analytics</span><span class="project-tag-pill">Power BI</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Sales Datasets Analysis</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Multi-channel retail intelligence suite evaluating market basket affinity, product cross-sell probability, price elasticity, and transaction cohort performance.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/sales-datasets-analysis" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/sales-datasets-analysis#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
 
-        <div class="portfolio-project-card" data-category="healthcare analytics data analysis">
-          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/clinical-data-analytics-suite.jpeg" data-title="Clinical Data Analytics Suite" data-desc="Healthcare informatics and hospital operations suite analyzing emergency room wait times, ESI acuity distributions, and length of stay (LOS)." data-github="https://github.com/sohailahmed-bsrh">
+        <!-- Project 29: Clinical Data Analytics Suite -->
+        <article class="project-card portfolio-project-card" data-category="data-analytics">
+          
+          <!-- 16:10 Thumbnail Frame with Lightbox Trigger -->
+          <div class="project-thumb-frame" data-src="./assets/images/thumbnail/clinical-data-analytics-suite.jpeg" data-title="Clinical Data Analytics Suite" data-desc="Healthcare operations analytics platform evaluating patient emergency room length-of-stay, admission triaging protocols, and resource allocation efficiency." data-github="https://github.com/sohailahmed-bsrh/clinical-data-analytics-suite">
             <picture>
               <source srcset="./assets/images/thumbnail/clinical-data-analytics-suite.webp" type="image/webp">
-              <img src="./assets/images/thumbnail/clinical-data-analytics-suite.jpeg" alt="Clinical Data Analytics Suite Thumbnail" loading="lazy" class="project-thumb-img">
+              <img src="./assets/images/thumbnail/clinical-data-analytics-suite.jpeg" alt="Clinical Data Analytics Suite Architecture Preview" loading="lazy" class="project-thumb-img">
             </picture>
+
+            <!-- Domain Category Badge -->
+            <span class="project-category-badge">DATA ANALYTICS</span>
+
+            <!-- Interactive Preview Overlay -->
             <div class="project-thumb-overlay">
-              <span class="preview-badge">View Full Preview</span>
+              <span class="overlay-preview-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> View Full Preview
+              </span>
             </div>
-            <span class="project-category-badge">HEALTHCARE ANALYTICS DATA ANALYSIS</span>
           </div>
 
-          <div class="project-body">
-            <h3 class="project-title">Clinical Data Analytics Suite</h3>
-            <p class="project-description">
-              Healthcare informatics and hospital operations suite analyzing emergency room wait times, ESI acuity distributions, and length of stay (LOS).
+          <!-- Card Content Body -->
+          <div class="project-card-body">
+            
+            <!-- Tech Pills Row -->
+            <div class="project-tags-row">
+              <span class="project-tag-pill">Python</span><span class="project-tag-pill">Healthcare Analytics</span><span class="project-tag-pill">Statistics</span><span class="project-tag-pill">Seaborn</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="project-card-title">Clinical Data Analytics Suite</h3>
+
+            <!-- Genuine Description -->
+            <p class="project-card-desc">
+              Healthcare operations analytics platform evaluating patient emergency room length-of-stay, admission triaging protocols, and resource allocation efficiency.
             </p>
 
-            <div class="project-tech-tags">
-              
-            </div>
-
+            <!-- Card Actions -->
             <div class="project-actions-row">
-              <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="project-card-btn btn-view-code">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> Code
+              <a href="https://github.com/sohailahmed-bsrh/clinical-data-analytics-suite" target="_blank" rel="noopener" class="btn-devsil-primary btn-devsil-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
               
+          <a href="https://github.com/sohailahmed-bsrh/clinical-data-analytics-suite#readme" target="_blank" rel="noopener" class="btn-devsil-outline btn-devsil-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Specs
+          </a>
+        
             </div>
+
           </div>
-        </div>
+        </article>
     
         </div>
+
       </div>
     </section>
 

@@ -178,22 +178,24 @@ function initSmoothScroll() {
 
 // 6. Project Filter Tabs
 function initProjectFilters() {
-  const tabs = document.querySelectorAll('.filter-tab');
-  const cards = document.querySelectorAll('.portfolio-project-card');
+  const tabs = document.querySelectorAll('.filter-btn, .filter-tab');
+  const cards = document.querySelectorAll('.project-card, .portfolio-project-card');
 
   if (!tabs.length || !cards.length) return;
 
   tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      const filter = tab.getAttribute('data-filter');
+      const filter = tab.getAttribute('data-filter') || 'all';
 
       cards.forEach(card => {
         const cat = card.getAttribute('data-category') || '';
         if (filter === 'all' || cat.toLowerCase().includes(filter.toLowerCase())) {
           card.style.display = 'flex';
+          card.style.opacity = '1';
         } else {
           card.style.display = 'none';
         }
@@ -204,18 +206,56 @@ function initProjectFilters() {
 
 // 7. Lightbox Modal
 function initLightbox() {
-  // Handlers attached globally
+  const modal = document.getElementById('lightbox-modal');
+  const closeBtn = document.getElementById('lightbox-close');
+  const overlay = document.getElementById('lightbox-overlay');
+  const dismissBtn = document.getElementById('lightbox-dismiss-btn');
+
+  if (!modal) return;
+
+  // Delegate click for project thumbnails
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.project-thumb-frame, .card-img-box');
+    if (trigger) {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-src');
+      const title = trigger.getAttribute('data-title');
+      const desc = trigger.getAttribute('data-desc');
+      const gh = trigger.getAttribute('data-github');
+      window.openLightbox(src, title, desc, gh);
+    }
+  });
+
+  const closeActions = [closeBtn, overlay, dismissBtn];
+  closeActions.forEach(el => {
+    if (el) {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.closeLightbox();
+      });
+    }
+  });
 }
 
-window.openLightbox = function(src, title) {
+window.openLightbox = function(src, title, desc, gh) {
   const modal = document.getElementById('lightbox-modal');
   const img = document.getElementById('lightbox-img');
   const titleEl = document.getElementById('lightbox-title');
+  const descEl = document.getElementById('lightbox-desc');
+  const codeBtn = document.getElementById('lightbox-code-btn');
+
   if (!modal || !img) return;
 
-  img.src = src;
-  img.alt = title || 'Preview';
-  if (titleEl) titleEl.textContent = title || 'Preview';
+  img.src = src || '';
+  img.alt = title || 'Project Preview';
+  if (titleEl) titleEl.textContent = title || 'Project Preview';
+  if (descEl) descEl.textContent = desc || '';
+  if (codeBtn && gh) {
+    codeBtn.href = gh;
+    codeBtn.style.display = 'inline-flex';
+  } else if (codeBtn) {
+    codeBtn.style.display = 'none';
+  }
 
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';

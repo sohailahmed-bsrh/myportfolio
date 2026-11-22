@@ -349,6 +349,20 @@ img, svg {
   box-shadow: 0 4px 14px rgba(31, 35, 40, 0.35);
   border-color: rgba(255, 255, 255, 0.2);
 }
+.social-brand-btn.brand-kaggle {
+  background: #20beff;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(32, 190, 255, 0.35);
+  border-color: rgba(32, 190, 255, 0.4);
+}
+
+.social-brand-btn.brand-whatsapp {
+  background: #25d366;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
 
 .social-brand-btn.brand-kaggle {
   background: #20beff;
@@ -566,6 +580,72 @@ img, svg {
   line-height: 1.12;
   margin-bottom: 1.25rem;
 }
+
+/* Hero Role Badges */
+.hero-role-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+}
+
+/* Monospace Typewriter Console */
+.hero-typewriter-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.15rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.95rem;
+  color: var(--primary);
+  min-height: 2.75rem;
+  max-width: 100%;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.typewriter-prefix {
+  color: var(--accent);
+  font-weight: 700;
+  user-select: none;
+}
+
+.typewriter-text {
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.typewriter-cursor {
+  color: var(--primary);
+  font-weight: 700;
+  animation: blink-cursor 0.9s infinite;
+  user-select: none;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 .hero-highlight {
   background: var(--grad-primary);

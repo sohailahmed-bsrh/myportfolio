@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <!-- STICKY SITE HEADER -->
+    <!-- STICKY SITE HEADER -->
   <header class="site-header" id="site-header">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" aria-label="Sohail Ahmed Home">
@@ -30,67 +30,75 @@
         <span class="brand-badge">AI ENGINEER</span>
       </a>
 
-      <nav class="nav-links" id="nav-links">
-        <a href="#hero" class="nav-item">Home</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#resume" class="nav-item">Experience & Education</a>
-        <a href="#skills" class="nav-item">Skills</a>
-        <a href="#projects" class="nav-item">Projects</a>
-        <a href="#certifications" class="nav-item">Certifications</a>
-        <a href="#contact" class="nav-item">Contact</a>
-      </nav>
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#resume" class="nav-link" data-section="resume">Experience & Education</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
 
-      <div class="header-action-group">
-        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+      <!-- Header Controls: Theme Toggle & Mobile Trigger -->
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light and Dark Theme" title="Toggle Theme">
           <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <a href="#contact" class="btn-devsil-primary btn-devsil-sm">
-          Hire Me
-        </a>
-
-        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
+        <button type="button" class="btn-menu-trigger" id="btn-header-sidebar" aria-label="Toggle navigation" title="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE DRAWER -->
-  <div class="mobile-drawer" id="mobile-drawer">
-    <a href="#hero" class="drawer-nav-item">Home</a>
-    <a href="#about" class="drawer-nav-item">About</a>
-    <a href="#resume" class="drawer-nav-item">Experience & Education</a>
-    <a href="#skills" class="drawer-nav-item">Skills</a>
-    <a href="#projects" class="drawer-nav-item">Projects</a>
-    <a href="#certifications" class="drawer-nav-item">Certifications</a>
-    <a href="#contact" class="drawer-nav-item">Contact</a>
-    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-      <a href="assets/cv/Sohail_Ahmed_CV.pdf" download class="btn-devsil-outline">
-        Download CV (PDF)
+  <!-- OFF-CANVAS MOBILE DRAWER (HIDDEN BY DEFAULT) -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span>Sohail Ahmed</span>
+        <span class="brand-badge">AI ENGINEER</span>
+      </div>
+      <button type="button" class="btn-close-sidebar" id="btn-close-sidebar" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#hero" class="drawer-nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#about" class="drawer-nav-link" data-section="about">About</a></li>
+      <li><a href="#resume" class="drawer-nav-link" data-section="resume">Experience & Education</a></li>
+      <li><a href="#skills" class="drawer-nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="drawer-nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#certifications" class="drawer-nav-link" data-section="certifications">Certifications</a></li>
+      <li><a href="#contact" class="drawer-nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="drawer-footer-actions">
+      <a href="assets/cv/Sohail_Ahmed_CV.pdf" download class="btn-devsil-primary" style="width: 100%; justify-content: center;">
+        Download Official CV
       </a>
-      <a href="tel:+923295619719" class="btn-devsil-primary">
-        Call +92 329 5619719
+      <a href="tel:+923295619719" class="btn-devsil-outline" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+        +92 329 5619719
       </a>
     </div>
-  </div>
+  </aside>
 
   <main>
 
-    <!-- 1. HERO SECTION -->
+        <!-- 1. HERO SECTION -->
     <section class="hero-section" id="hero">
       <div class="container">
         <div class="hero-grid">
           
           <!-- Hero Left Content -->
           <div class="hero-content">
-            <div class="hero-status-pill">
-              <span class="status-indicator"></span>
-              <span>Available for Full-Stack AI Roles & High-Impact Projects</span>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span>Available for AI Engineering Roles & High-Impact Projects</span>
             </div>
 
-            <h1 class="hero-main-title">
+            <h1 class="hero-title">
               Hi, I'm <span class="hero-highlight">Sohail Ahmed</span>
             </h1>
 
@@ -100,20 +108,20 @@
               <span class="role-badge">FULL-STACK AI</span>
             </div>
 
-            <!-- Animated Typing Banner -->
+            <!-- Monospace Typewriter Console -->
             <div class="hero-typewriter-container">
               <span class="typewriter-prefix">&gt;</span>
-              <span class="typewriter-text" id="typewriter-text"></span>
+              <span class="typewriter-text" id="hero-typewriter">Building Autonomous Agentic AI Systems & Multi-Agent Workflows</span>
               <span class="typewriter-cursor">|</span>
             </div>
 
-            <p class="hero-description">
+            <p class="hero-bio">
               "Building intelligent AI systems that solve real-world problems through data, automation, and innovation."<br><br>
               I work at the intersection of Machine Learning, Generative AI, and intelligent automation — turning raw data into real-world business impact.
             </p>
 
-            <!-- Tactile Devsil Action Buttons -->
-            <div class="hero-cta-group">
+            <!-- Tactile Action Buttons -->
+            <div class="hero-cta-row">
               <a href="#projects" class="btn-devsil-primary">
                 Explore 29 Projects
               </a>
@@ -125,7 +133,7 @@
               </a>
             </div>
 
-            <!-- Social Links Row with Clean Kaggle SVG -->
+            <!-- Social Links Row with Clean Text-Based Kaggle (Zero 'K' SVG) -->
             <div class="hero-social-row">
               <a href="https://www.linkedin.com/in/sohail-ahmed-devsil/" target="_blank" rel="noopener" class="social-brand-btn brand-linkedin" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
@@ -133,9 +141,7 @@
               <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="social-brand-btn brand-github" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
               </a>
-              <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">
-                <svg viewBox="0 0 24 24"><path d="M18.825 23.859c-.022.09-.09.141-.188.141h-3.139c-.187 0-.351-.082-.457-.221l-5.385-7.142-1.636 1.562v5.521c0 .16-.134.281-.295.281H5.112c-.161 0-.295-.121-.295-.281V.281C4.817.12 4.951 0 5.112 0h2.613c.161 0 .295.12.295.281v14.475l6.837-7.394c.107-.12.26-.201.429-.201h3.328c.107 0 .179.06.197.161.027.12-.009.24-.08.321l-7.258 7.643 7.572 8.353c.063.07.08.17.06.26z"/></svg> Kaggle
-              </a>
+              <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">Kaggle</a>
               <a href="https://x.com/ahmed241126" target="_blank" rel="noopener" class="social-brand-btn brand-x" aria-label="Twitter / X">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter
               </a>
@@ -171,8 +177,8 @@
                   <div class="stat-label">Hazara CGPA</div>
                 </div>
                 <div class="stat-box">
-                  <div class="stat-num">Top 1%</div>
-                  <div class="stat-label">micro1 Performer</div>
+                  <div class="stat-num">100%</div>
+                  <div class="stat-label">Code Integrity</div>
                 </div>
               </div>
             </div>
@@ -380,58 +386,62 @@
       </div>
     </section>
 
-    <!-- 4. SKILLS SECTION -->
+        <!-- 4. SKILLS SECTION (RECOVERED FROM CE95F62 WITH ZERO EMOJIS) -->
     <section class="skills-section" id="skills">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Competencies</div>
           <h2 class="section-title">Verified Technical Skills Matrix</h2>
           <p class="section-subtitle">
-            Categorized directly according to verified engineering competencies and hands-on production experience.
+            Authentic engineering capabilities and tools recovered from verified production repositories and Devsil experience.
           </p>
         </div>
 
         <div class="skills-categories-grid">
           
-          <!-- Category 1: AI & Data Science -->
+          <!-- Category 1: AI, Machine Learning & Deep Learning -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
               </div>
-              <h3 class="skill-cat-title">AI, ML & Generative AI</h3>
+              <h3 class="skill-cat-title">AI & Data Science</h3>
             </div>
             <div class="skill-tags-cloud">
               <span class="skill-tag-pill">Machine Learning</span>
               <span class="skill-tag-pill">Deep Learning</span>
               <span class="skill-tag-pill">Generative AI</span>
-              <span class="skill-tag-pill">LLMs & Prompt Engineering</span>
-              <span class="skill-tag-pill">Retrieval-Augmented Generation (RAG)</span>
-              <span class="skill-tag-pill">AI Agents & Agentic AI</span>
+              <span class="skill-tag-pill">Computer Vision</span>
+              <span class="skill-tag-pill">AI Agents</span>
+              <span class="skill-tag-pill">Agentic AI</span>
+              <span class="skill-tag-pill">RAG (Retrieval-Augmented Gen)</span>
+              <span class="skill-tag-pill">NLP</span>
+              <span class="skill-tag-pill">Prompt Engineering</span>
+              <span class="skill-tag-pill">Data Analytics</span>
+              <span class="skill-tag-pill">EDA</span>
+              <span class="skill-tag-pill">Feature Engineering</span>
               <span class="skill-tag-pill">Model Deployment</span>
             </div>
           </div>
 
-          <!-- Category 2: Computer Vision & NLP -->
+          <!-- Category 2: Programming Languages -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
               </div>
-              <h3 class="skill-cat-title">Computer Vision & NLP</h3>
+              <h3 class="skill-cat-title">Programming Languages</h3>
             </div>
             <div class="skill-tags-cloud">
-              <span class="skill-tag-pill">OpenCV</span>
-              <span class="skill-tag-pill">Ultralytics YOLOv8</span>
-              <span class="skill-tag-pill">Facial Landmark Tracking</span>
-              <span class="skill-tag-pill">Convolutional Neural Networks (CNN)</span>
-              <span class="skill-tag-pill">LSTM & Natural Language Processing</span>
-              <span class="skill-tag-pill">Hugging Face Transformers</span>
-              <span class="skill-tag-pill">4-Point Homography Warp</span>
+              <span class="skill-tag-pill">Python</span>
+              <span class="skill-tag-pill">SQL</span>
+              <span class="skill-tag-pill">JavaScript</span>
+              <span class="skill-tag-pill">HTML5 / CSS3</span>
+              <span class="skill-tag-pill">MATLAB (basics)</span>
             </div>
           </div>
 
-          <!-- Category 3: Frameworks & Tools -->
+          <!-- Category 3: Frameworks & Libraries -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
@@ -444,31 +454,93 @@
               <span class="skill-tag-pill">TensorFlow</span>
               <span class="skill-tag-pill">Scikit-learn</span>
               <span class="skill-tag-pill">LangChain</span>
+              <span class="skill-tag-pill">OpenCV</span>
+              <span class="skill-tag-pill">Pandas</span>
+              <span class="skill-tag-pill">NumPy</span>
+              <span class="skill-tag-pill">Matplotlib & Seaborn</span>
               <span class="skill-tag-pill">FastAPI</span>
               <span class="skill-tag-pill">Flask</span>
               <span class="skill-tag-pill">Streamlit</span>
-              <span class="skill-tag-pill">Pandas & NumPy</span>
+              <span class="skill-tag-pill">Hugging Face</span>
+              <span class="skill-tag-pill">React (basics)</span>
               <span class="skill-tag-pill">Power BI</span>
             </div>
           </div>
 
-          <!-- Category 4: Programming, Cloud & Databases -->
+          <!-- Category 4: Deployment & Cloud -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4 6h16v2H4V6zm2 4h12v2H6v-2zm-2 4h16v2H4v-2zm4 4h8v2H8v-2z"/></svg>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
               </div>
-              <h3 class="skill-cat-title">Languages, Databases & Deployment</h3>
+              <h3 class="skill-cat-title">Deployment, Cloud & MLOps</h3>
             </div>
             <div class="skill-tags-cloud">
-              <span class="skill-tag-pill">Python</span>
-              <span class="skill-tag-pill">SQL</span>
-              <span class="skill-tag-pill">JavaScript</span>
-              <span class="skill-tag-pill">HTML5 / CSS3</span>
-              <span class="skill-tag-pill">PostgreSQL & MySQL</span>
-              <span class="skill-tag-pill">ChromaDB & FAISS</span>
-              <span class="skill-tag-pill">Docker & MLOps</span>
+              <span class="skill-tag-pill">Docker</span>
+              <span class="skill-tag-pill">AWS (basics)</span>
+              <span class="skill-tag-pill">Render</span>
+              <span class="skill-tag-pill">Streamlit Cloud</span>
+              <span class="skill-tag-pill">GitHub Pages</span>
+              <span class="skill-tag-pill">Railway</span>
+              <span class="skill-tag-pill">MLOps</span>
+              <span class="skill-tag-pill">CI/CD (basics)</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Databases & Vector Stores -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 18c-4.41 0-8-1.57-8-3.5v-2.18c2.08 1.45 5.05 2.18 8 2.18s5.92-.73 8-2.18V16.5c0 1.93-3.59 3.5-8 3.5zm0-5.5c-4.41 0-8-1.57-8-3.5v-2.18c2.08 1.45 5.05 2.18 8 2.18s5.92-.73 8-2.18V11c0 1.93-3.59 3.5-8 3.5zm0-5.5c-4.41 0-8-1.57-8-3.5C4 3.57 7.59 2 12 2s8 1.57 8 3.5-3.59 3.5-8 3.5z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Databases & Vector Stores</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag-pill">PostgreSQL</span>
+              <span class="skill-tag-pill">MySQL</span>
+              <span class="skill-tag-pill">MongoDB</span>
+              <span class="skill-tag-pill">ChromaDB</span>
+              <span class="skill-tag-pill">FAISS</span>
+              <span class="skill-tag-pill">Pinecone (basics)</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Professional Tools -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Professional Tools</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag-pill">VS Code</span>
+              <span class="skill-tag-pill">Jupyter Notebook</span>
               <span class="skill-tag-pill">Git & GitHub</span>
+              <span class="skill-tag-pill">Google Colab</span>
+              <span class="skill-tag-pill">Kaggle</span>
+              <span class="skill-tag-pill">Notion</span>
+              <span class="skill-tag-pill">Linux (Ubuntu)</span>
+            </div>
+          </div>
+
+          <!-- Category 7: Soft Skills -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Soft Skills</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag-pill">Problem Solving</span>
+              <span class="skill-tag-pill">Technical Communication</span>
+              <span class="skill-tag-pill">Team Collaboration</span>
+              <span class="skill-tag-pill">Critical Thinking</span>
+              <span class="skill-tag-pill">Time Management</span>
+              <span class="skill-tag-pill">Presentation</span>
+              <span class="skill-tag-pill">Adaptability</span>
+              <span class="skill-tag-pill">Self-Motivated</span>
             </div>
           </div>
 
@@ -476,7 +548,7 @@
       </div>
     </section>
 
-        <!-- 5. PROJECTS SECTION (29 PRODUCTION REPOSITORIES) -->
+    <!-- 5. PROJECTS SECTION (29 PRODUCTION REPOSITORIES) -->
     <section class="projects-section" id="projects">
       <div class="container">
         
@@ -2178,9 +2250,7 @@
                 <a href="https://github.com/sohailahmed-bsrh" target="_blank" rel="noopener" class="social-brand-btn brand-github" aria-label="GitHub">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub
                 </a>
-                <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">
-                  <svg viewBox="0 0 24 24"><path d="M18.825 23.859c-.022.09-.09.141-.188.141h-3.139c-.187 0-.351-.082-.457-.221l-5.385-7.142-1.636 1.562v5.521c0 .16-.134.281-.295.281H5.112c-.161 0-.295-.121-.295-.281V.281C4.817.12 4.951 0 5.112 0h2.613c.161 0 .295.12.295.281v14.475l6.837-7.394c.107-.12.26-.201.429-.201h3.328c.107 0 .179.06.197.161.027.12-.009.24-.08.321l-7.258 7.643 7.572 8.353c.063.07.08.17.06.26z"/></svg> Kaggle
-                </a>
+                <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">Kaggle</a>
                 <a href="https://x.com/ahmed241126" target="_blank" rel="noopener" class="social-brand-btn brand-x" aria-label="Twitter / X">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X
                 </a>
@@ -2240,9 +2310,7 @@
         <a href="https://www.linkedin.com/in/sohail-ahmed-devsil/" target="_blank" rel="noopener" class="social-brand-btn brand-linkedin" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">
-          <svg viewBox="0 0 24 24"><path d="M18.825 23.859c-.022.09-.09.141-.188.141h-3.139c-.187 0-.351-.082-.457-.221l-5.385-7.142-1.636 1.562v5.521c0 .16-.134.281-.295.281H5.112c-.161 0-.295-.121-.295-.281V.281C4.817.12 4.951 0 5.112 0h2.613c.161 0 .295.12.295.281v14.475l6.837-7.394c.107-.12.26-.201.429-.201h3.328c.107 0 .179.06.197.161.027.12-.009.24-.08.321l-7.258 7.643 7.572 8.353c.063.07.08.17.06.26z"/></svg>
-        </a>
+        <a href="https://www.kaggle.com/sohail2411126" target="_blank" rel="noopener" class="social-brand-btn brand-kaggle" aria-label="Kaggle">Kaggle</a>
         <a href="https://x.com/ahmed241126" target="_blank" rel="noopener" class="social-brand-btn brand-x" aria-label="Twitter / X">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
@@ -2253,42 +2321,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING TACTILE BOTTOM DOCK -->
-  <nav class="floating-bottom-dock" aria-label="Quick Dock">
-    <a href="#hero" class="dock-action-btn active" data-dock="hero" title="Home">
-      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-      <span class="dock-tooltip">Home</span>
-    </a>
-    <a href="#about" class="dock-action-btn" data-dock="about" title="About">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-      <span class="dock-tooltip">About</span>
-    </a>
-    <a href="#resume" class="dock-action-btn" data-dock="resume" title="Experience">
-      <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-      <span class="dock-tooltip">Resume</span>
-    </a>
-    <a href="#skills" class="dock-action-btn" data-dock="skills" title="Skills">
-      <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
-      <span class="dock-tooltip">Skills</span>
-    </a>
-    <a href="#projects" class="dock-action-btn" data-dock="projects" title="Projects">
-      <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-      <span class="dock-tooltip">Projects</span>
-    </a>
-    <a href="#certifications" class="dock-action-btn" data-dock="certifications" title="Certifications">
-      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-      <span class="dock-tooltip">Certifications</span>
-    </a>
-    <a href="#contact" class="dock-action-btn" data-dock="contact" title="Contact">
-      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      <span class="dock-tooltip">Contact</span>
-    </a>
-    <button type="button" class="dock-action-btn theme-toggle-btn" aria-label="Toggle Theme" title="Theme">
-      <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <span class="dock-tooltip">Theme</span>
-    </button>
-  </nav>
+  
 
   <!-- INTERACTIVE LIGHTBOX MODAL -->
   <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">

@@ -1,15 +1,15 @@
 /* ============================================================
-   SOHAIL AHMED - CLIENT INTERACTION ENGINE (v2026.8)
+   SOHAIL AHMED - CLIENT INTERACTION ENGINE (v2026.9)
    - High-Performance Event Architecture
    - Zero-Flicker Light & Dark Theme Persistence
-   - Typewriter, Scroll-Spy, Lightbox, Dynamic Filters
+   - Typewriter, Single Navigation Scroll-Spy, Lightbox, Dynamic Filters
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initTypewriter();
   initSidebar();
-  initBottomDockScrollSpy();
+  initScrollSpy();
   initProjectFilters();
   initLightbox();
   initSmoothScroll();
@@ -47,7 +47,7 @@ function initTypewriter() {
     'Building Autonomous Agentic AI Systems & Multi-Agent Workflows',
     'Developing Real-Time Computer Vision & Edge AI Architectures',
     'Fine-Tuning Domain LLMs & Grounded Clinical RAG Pipelines',
-    'Architecting High-Throughput FastAPI REST & Bun Microservices',
+    'Architecting High-Throughput FastAPI REST Microservices',
     'Engineering Scalable Production Machine Learning & MLOps Pipelines'
   ];
 
@@ -84,12 +84,11 @@ function initTypewriter() {
   tick();
 }
 
-// 3. Sidebar Navigation Drawer
+// 3. Sidebar Navigation Drawer (Mobile)
 function initSidebar() {
   const drawer = document.getElementById('sidebar-drawer');
   const backdrop = document.getElementById('sidebar-backdrop');
   const btnHeader = document.getElementById('btn-header-sidebar');
-  const btnDock = document.getElementById('dock-sidebar-btn');
   const btnClose = document.getElementById('btn-close-sidebar');
 
   function openSidebar() {
@@ -105,7 +104,6 @@ function initSidebar() {
   }
 
   if (btnHeader) btnHeader.addEventListener('click', openSidebar);
-  if (btnDock) btnDock.addEventListener('click', openSidebar);
   if (btnClose) btnClose.addEventListener('click', closeSidebar);
   if (backdrop) backdrop.addEventListener('click', closeSidebar);
 
@@ -120,9 +118,8 @@ function initSidebar() {
   });
 }
 
-// 4. Floating Bottom Dock & Scroll-Spy
-function initBottomDockScrollSpy() {
-  const dockBtns = document.querySelectorAll('.dock-action-btn[data-section]');
+// 4. Single Navigation Scroll-Spy
+function initScrollSpy() {
   const navLinks = document.querySelectorAll('.nav-link[data-section]');
   const drawerLinks = document.querySelectorAll('.drawer-nav-link[data-section]');
   const sections = document.querySelectorAll('section[id]');
@@ -133,10 +130,6 @@ function initBottomDockScrollSpy() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-
-        dockBtns.forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('data-section') === id);
-        });
 
         navLinks.forEach(link => {
           link.classList.toggle('active', link.getAttribute('data-section') === id);

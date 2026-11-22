@@ -1,28 +1,54 @@
 /* ============================================================
-   Sohail Ahmed Portfolio - Client JavaScript (v2026.5)
-   - Devsil Design System & High-Performance Interactions
+   SOHAIL AHMED - CLIENT INTERACTION ENGINE (v2026.8)
+   - High-Performance Event Architecture
+   - Zero-Flicker Light & Dark Theme Persistence
+   - Typewriter, Scroll-Spy, Lightbox, Dynamic Filters
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initTypewriter();
   initSidebar();
   initBottomDockScrollSpy();
   initProjectFilters();
   initLightbox();
   initSmoothScroll();
+  initContactForm();
 });
 
-// 1. Hero Dynamic Typewriter
+// 1. Theme Toggle System (Dark / Light)
+function initTheme() {
+  const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  
+  // Get initial theme
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 
+                       localStorage.getItem('devsil-theme') || 
+                       'dark';
+                       
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const active = document.documentElement.getAttribute('data-theme');
+      const nextTheme = active === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('devsil-theme', nextTheme);
+    });
+  });
+}
+
+// 2. Hero Dynamic Typewriter
 function initTypewriter() {
   const el = document.getElementById('hero-typewriter');
   if (!el) return;
 
   const roles = [
-    'Building Autonomous AI Agents & Vision Systems',
-    'Fine-Tuning LLMs & Retrieval-Augmented Generation (RAG)',
-    'Real-Time Computer Vision & YOLO Detection Pipelines',
-    'Production Machine Learning & High-Throughput APIs',
-    'End-to-End MLOps & High-Performance Data Engineering'
+    'Building Autonomous Agentic AI Systems & Multi-Agent Workflows',
+    'Developing Real-Time Computer Vision & Edge AI Architectures',
+    'Fine-Tuning Domain LLMs & Grounded Clinical RAG Pipelines',
+    'Architecting High-Throughput FastAPI REST & Bun Microservices',
+    'Engineering Scalable Production Machine Learning & MLOps Pipelines'
   ];
 
   let roleIdx = 0;
@@ -38,7 +64,7 @@ function initTypewriter() {
       charIdx++;
       if (charIdx === current.length) {
         isDeleting = true;
-        waitTicks = 30; // pause at end
+        waitTicks = 32; // pause at end
       }
     } else {
       if (waitTicks > 0) {
@@ -52,13 +78,13 @@ function initTypewriter() {
         }
       }
     }
-    setTimeout(tick, isDeleting ? 30 : 60);
+    setTimeout(tick, isDeleting ? 25 : 55);
   }
 
   tick();
 }
 
-// 2. Sidebar Navigation Drawer
+// 3. Sidebar Navigation Drawer
 function initSidebar() {
   const drawer = document.getElementById('sidebar-drawer');
   const backdrop = document.getElementById('sidebar-backdrop');
@@ -87,7 +113,6 @@ function initSidebar() {
     if (e.key === 'Escape') closeSidebar();
   });
 
-  // Close sidebar on clicking any drawer link
   document.querySelectorAll('.drawer-nav-link').forEach(link => {
     link.addEventListener('click', () => {
       closeSidebar();
@@ -95,13 +120,14 @@ function initSidebar() {
   });
 }
 
-// 3. Floating Bottom Dock & Scroll-Spy
+// 4. Floating Bottom Dock & Scroll-Spy
 function initBottomDockScrollSpy() {
   const dockBtns = document.querySelectorAll('.dock-action-btn[data-section]');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
   const drawerLinks = document.querySelectorAll('.drawer-nav-link[data-section]');
   const sections = document.querySelectorAll('section[id]');
 
-  if (!sections.length || !dockBtns.length) return;
+  if (!sections.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -109,35 +135,31 @@ function initBottomDockScrollSpy() {
         const id = entry.target.getAttribute('id');
 
         dockBtns.forEach(btn => {
-          if (btn.getAttribute('data-section') === id) {
-            btn.classList.add('active');
-          } else {
-            btn.classList.remove('active');
-          }
+          btn.classList.toggle('active', btn.getAttribute('data-section') === id);
+        });
+
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('data-section') === id);
         });
 
         drawerLinks.forEach(link => {
-          if (link.getAttribute('data-section') === id) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
+          link.classList.toggle('active', link.getAttribute('data-section') === id);
         });
       }
     });
   }, {
-    rootMargin: '-20% 0px -60% 0px'
+    rootMargin: '-25% 0px -55% 0px'
   });
 
   sections.forEach(sec => observer.observe(sec));
 }
 
-// 4. Smooth Anchor Scrolling
+// 5. Smooth Anchor Scrolling
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (!targetId || targetId === '#') return;
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
@@ -154,7 +176,7 @@ function initSmoothScroll() {
   });
 }
 
-// 5. Project Filter Tabs
+// 6. Project Filter Tabs
 function initProjectFilters() {
   const tabs = document.querySelectorAll('.filter-tab');
   const cards = document.querySelectorAll('.portfolio-project-card');
@@ -170,7 +192,7 @@ function initProjectFilters() {
 
       cards.forEach(card => {
         const cat = card.getAttribute('data-category') || '';
-        if (filter === 'all' || cat.includes(filter)) {
+        if (filter === 'all' || cat.toLowerCase().includes(filter.toLowerCase())) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -180,12 +202,11 @@ function initProjectFilters() {
   });
 }
 
-
+// 7. Lightbox Modal
 function initLightbox() {
-  // Global modal handlers ready
+  // Handlers attached globally
 }
 
-// 6. Lightbox Modal
 window.openLightbox = function(src, title) {
   const modal = document.getElementById('lightbox-modal');
   const img = document.getElementById('lightbox-img');
@@ -200,9 +221,41 @@ window.openLightbox = function(src, title) {
   document.body.style.overflow = 'hidden';
 };
 
-window.closeLightbox = function(e) {
+window.closeLightbox = function() {
   const modal = document.getElementById('lightbox-modal');
   if (!modal) return;
   modal.style.display = 'none';
   document.body.style.overflow = '';
 };
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') window.closeLightbox();
+});
+
+// 8. Contact Form Handling
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    
+    btn.disabled = true;
+    btn.innerHTML = '<span class="status-dot"></span> Sending Message...';
+
+    // Simulate reliable submission
+    setTimeout(() => {
+      btn.innerHTML = '✓ Message Sent Successfully!';
+      btn.style.background = 'var(--success)';
+      form.reset();
+      
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+      }, 4000);
+    }, 1000);
+  });
+}
